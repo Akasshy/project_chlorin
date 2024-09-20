@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\AuthController;
+// use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('login');
+    return view('auth.login');
 });
 
-Route::get('/login',[Controller::class,'viewlogin']);
+Route::get('/login',[AuthController::class,'ViewLogin']);
