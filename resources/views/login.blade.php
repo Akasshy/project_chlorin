@@ -38,11 +38,11 @@
     </style>
     <div class="container-fluid" style="width: 100vw; height: 100vh;">
         <div class="row" style="gap: 60px;">
-            <div class="col-md-4 left-side d-flex flex-column align-items-center" style="background-color: #ECD6FD; height: 100vh;border-top-right-radius: 50px;border-end-end-radius: 50px;">
+            <div class="col-md-4 left-side d-flex flex-column align-items-center" style="background-color: #6DA5C0; height: 100vh;border-top-right-radius: 50px;border-end-end-radius: 50px;">
                 <div class="left-side p-5 mt-5">
-                    <h2 class="title fw-bold mb-5" style="color: #470B77;width: 50px;">Praktik Kerja Lapangan</h2>
+                    <h2 class="title fw-bold mb-5 text-white" style="width: 50px;">Praktik Kerja Lapangan</h2>
                     <div class="illustration">
-                        <img src="img/logo.png" style="width: 250px;" alt="">
+                        <img src="logo.png" style="width: 250px;" alt="">
                     </div>
                 </div>
             </div>
@@ -52,20 +52,20 @@
                         <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                             <h2 class=" me-3 fw-bold mb-3">Login</h2>    
                         </div>                
-                        {{-- <div data-mdb-input-init class="form-outline mb-3 mt-3">
+                        <!-- {{-- <div data-mdb-input-init class="form-outline mb-3 mt-3">
                             <label class="form-label fw-bold ms-3" for="form3Example1">Username</label>
                             <input type="text" id="form3Example1" style="background-color: #F0F0F0; border-radius: 20px;" class="form-control form-control-lg"
                                 placeholder="example" />
-                        </div> --}}
+                        </div> --}} -->
                         <div data-mdb-input-init class="form-outline mb-3 mt-3">
                             <label class="form-label fw-bold ms-3" for="form3Example2">Email</label>
                             <input type="email" id="form3Example2" style="background-color: #F0F0F0; border-radius: 20px;" class="form-control form-control-lg"
                                 placeholder="example@gmail.com" />
                         </div>
                         <div data-mdb-input-init class="form-outline mb-3 mt-3">
-                            {{-- <div class="input-group-append">
+                            <!-- {{-- <div class="input-group-append">
                                 <i class="fas fa-eye" id="toggle-icon" onclick="togglePasswordVisibility()"></i>
-                            </div> --}}
+                            </div> --}} -->
                             <div class="input-container">
                                 <label class="form-label fw-bold ms-3" for="password">Password</label>
                                 <input type="password" id="password" style="background-color: #F0F0F0; border-radius: 20px;" class="form-control form-control-lg"
@@ -84,10 +84,10 @@
                             <a href="#!" class="" style="text-decoration: none; color:#470B77;">Lupa password?</a>
                         </div>
     
-                        <div class="text-center text-lg-start mt-4 pt-2">
+                        <div class="text-center text-lg-start mt-4 " style="padding-top: 100px;">
                             <button type="button" data-mdb-button-init data-mdb-ripple-init
                                 class="btn btn-lg w-100  text-center fw-bold"
-                                style="padding-left: 2.5rem; padding-right: 2.5rem; border-radius: 30px; background-color: #AD66E5; color: white;">Login</button>
+                                style="padding-left: 2.5rem; padding-right: 2.5rem; border-radius: 30px; background-color: #294D61; color: white;">Login</button>
                             <!-- <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="register.html"
                                     class="link-danger">Register</a></p> -->
                         </div>
