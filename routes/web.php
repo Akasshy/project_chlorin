@@ -9,3 +9,5 @@ Route::get('/', function () {
 });
 
 Route::get('/login',[AuthController::class,'ViewLogin']);
+Route::post('/auth',[AuthController::class,'login']);
+Route::get('/test',[AuthController::class,'testApi']);
