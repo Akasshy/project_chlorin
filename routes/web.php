@@ -5,9 +5,9 @@ use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('auth.login');
+    return redirect('/login');
 });
 
-Route::get('/login',[AuthController::class,'ViewLogin']);
+Route::get('/login',[AuthController::class,'viewLogin']);
 Route::post('/auth',[AuthController::class,'login']);
-Route::get('/test',[AuthController::class,'testApi']);
+Route::get('/test',[AuthController::class,'wellcome']);

@@ -47,6 +47,9 @@
                 </div>
             </div>
             <div class="col-md-6 mt-5">
+                @if (Session::has('login'))
+                    {{ Session::get('login') }}
+                @endif
                 <div class="form " style=" border: 2px solid #F0F0F0 ; border-bottom: 4px solid #F0F0F0; border-radius: 50px; border-top: none; ">
                     <form class="p-5" action="/auth" method="POST">
                         @csrf
@@ -61,7 +64,7 @@
                         <div data-mdb-input-init class="form-outline mb-3 mt-3">
                             <label class="form-label fw-bold ms-3" for="form3Example2">Email</label>
                             <input type="email" id="form3Example2" name="email" style="background-color: #F0F0F0; border-radius: 20px;" class="form-control form-control-lg"
-                                placeholder="example@gmail.com" />
+                                placeholder="example@gmail.com" value="{{ old('email') }}">
                         </div>
                         <div data-mdb-input-init class="form-outline mb-3 mt-3">
                             {{-- <div class="input-group-append">
@@ -70,7 +73,7 @@
                             <div class="input-container">
                                 <label class="form-label fw-bold ms-3" for="password">Password</label>
                                 <input type="password" id="password" name="password" style="background-color: #F0F0F0; border-radius: 20px;" class="form-control form-control-lg"
-                                    placeholder="admin#123" />
+                                    placeholder="admin#123" value="{{ old('password') }}">
                                 <i class="fas fa-eye input-icon" id="toggle-icon" onclick="togglePasswordVisibility()"></i>
                             </div> 
                         </div>
@@ -86,7 +89,7 @@
                         </div>
     
                         <div class="text-center text-lg-start mt-4 pt-2">
-                            <button type="button" data-mdb-button-init data-mdb-ripple-init
+                            <button type="submit" data-mdb-button-init data-mdb-ripple-init
                                 class="btn btn-lg w-100  text-center fw-bold"
                                 style="padding-left: 2.5rem; padding-right: 2.5rem; border-radius: 30px; background-color: #AD66E5; color: white;">Login</button>
                             <!-- <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="register.html"
