@@ -42,14 +42,13 @@
                 <div class="left-side p-5 mt-5">
                     <h2 class="title fw-bold mb-5 text-white" style="width: 50px;">Praktik Kerja Lapangan</h2>
                     <div class="illustration">
-                        <img src="logo.png" style="width: 250px;" alt="">
+                        <img src="img/logo.png" style="width: 250px;" alt="">
                     </div>
                 </div>
             </div>
             <div class="col-md-6 mt-5">
                 <div class="form " style=" border: 2px solid #F0F0F0 ; border-bottom: 4px solid #F0F0F0; border-radius: 50px; border-top: none; ">
-                    <form class="p-5" action="/auth" method="POST">
-                        @csrf
+                    <form class="p-5">
                         <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                             <h2 class=" me-3 fw-bold mb-3">Login</h2>    
                         </div>                
@@ -60,7 +59,7 @@
                         </div> --}} -->
                         <div data-mdb-input-init class="form-outline mb-3 mt-3">
                             <label class="form-label fw-bold ms-3" for="form3Example2">Email</label>
-                            <input type="email" id="form3Example2" name="email" style="background-color: #F0F0F0; border-radius: 20px;" class="form-control form-control-lg"
+                            <input type="email" id="form3Example2" style="background-color: #F0F0F0; border-radius: 20px;" class="form-control form-control-lg"
                                 placeholder="example@gmail.com" />
                         </div>
                         <div data-mdb-input-init class="form-outline mb-3 mt-3">
@@ -69,7 +68,7 @@
                             </div> --}} -->
                             <div class="input-container">
                                 <label class="form-label fw-bold ms-3" for="password">Password</label>
-                                <input type="password" id="password" name="password" style="background-color: #F0F0F0; border-radius: 20px;" class="form-control form-control-lg"
+                                <input type="password" id="password" style="background-color: #F0F0F0; border-radius: 20px;" class="form-control form-control-lg"
                                     placeholder="admin#123" />
                                 <i class="fas fa-eye input-icon" id="toggle-icon" onclick="togglePasswordVisibility()"></i>
                             </div> 

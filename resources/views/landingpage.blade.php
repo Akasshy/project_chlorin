@@ -8,13 +8,14 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'> 
 <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 <style>
     body{
         scroll-behavior: smooth;
         margin: auto 0px;
     }
     .up{
-        background-image:url(fbg.PNG) ;
+        background-image:url(img/fbg.PNG) ;
         background-size: cover;
         padding-bottom: 48%;
         
@@ -154,7 +155,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <img src="laptop.png" width="450px" style="position: absolute; z-index: 1; top: 160px; margin-left: 100px;" h alt="">
+                <img src="img/laptop.png" width="450px" style="position: absolute; z-index: 1; top: 160px; margin-left: 100px;" h alt="">
             </div>
           </div>
     </div>
@@ -166,10 +167,10 @@
             </p>
             <div class="row ms-5 ps-5 mt-5" style="gap: 40px;">
                 <div class="col-md-5">
-                    <img src="Frame 37.png" width="100%" alt="">
+                    <img src="img/Frame 37.png" width="100%" alt="">
                 </div>
                 <div class="col-md-5">
-                    <img src="Frame 36.png" width="100%" alt="">
+                    <img src="img/Frame 36.png" width="100%" alt="">
                 </div>
             </div>
             <div class="row mt-5" style="margin-left: 200px; gap: 20px;">
@@ -199,40 +200,40 @@
             <h2 class="text-center fw-bold">Vacancy</h2>
             <div class="row mt-5 ">
                 <div class="col-md-3">
-                    <img id="otomotip" src="otomotip.png" width="200px" alt="">
+                    <img id="otomotip" src="img/otomotip.png" width="200px" alt="">
                 </div>
                 <div class="col-md-3">
-                    <img id="otomotip2" src="otomotip.png" width="220px" alt="">
+                    <img id="otomotip2" src="img/otomotip.png" width="220px" alt="">
                 </div>
                 <div class="col-md-3">
-                    <img id="otomotip" src="otomotip.png" width="200px" alt="">
+                    <img id="otomotip" src="img/otomotip.png" width="200px" alt="">
                 </div>
                 <div class="col-md-3">
-                    <img id="otomotip2" src="otomotip.png" width="220px" alt="">
+                    <img id="otomotip2" src="img/otomotip.png" width="220px" alt="">
                 </div>
                 <div class="col-md-3">
-                    <img id="otomotip" src="otomotip.png" width="200px" alt="">
+                    <img id="otomotip2" src="img/otomotip.png" width="220px" alt="">
                 </div>
-                <div class="col-md-3 mt-5">
-                    <img id="otomotip2" src="otomotip.png" width="220px" alt="">
-                </div>
-                <div class="col-md-3">
-                    <img id="otomotip" src="otomotip.png" width="200px" alt="">
-                </div>
-                <div class="col-md-3 mt-5">
-                    <img id="otomotip2" src="otomotip.png" width="220px" alt="">
+                <div class="col-md-3 mt-4">
+                    <img id="otomotip" src="img/otomotip.png" width="200px" alt="">
                 </div>
                 <div class="col-md-3">
-                    <img id="otomotip" src="otomotip.png" width="200px" alt="">
+                    <img id="otomotip2" src="img/otomotip.png" width="220px" alt="">
                 </div>
-                <div class="col-md-3 mt-5">
-                    <img id="otomotip2" src="otomotip" width="250px" alt="">
+                <div class="col-md-3 mt-4">
+                    <img id="otomotip" src="img/otomotip.png" width="200px" alt="">
                 </div>
                 <div class="col-md-3">
-                    <img id="otomotip" src="otomotip.png" width="200px" alt="">
+                    <img id="otomotip" src="img/otomotip.png" width="200px" alt="">
                 </div>
-                <div class="col-md-3 mt-5">
-                    <img id="otomotip2" src="otomotip" width="240px" alt="">
+                <div class="col-md-3 mt-4">
+                    <img id="otomotip2" src="img/otomotip.png" width="220px" alt="">
+                </div>
+                <div class="col-md-3">
+                    <img id="otomotip" src="img/otomotip.png" width="200px" alt="">
+                </div>
+                <div class="col-md-3 mt-4">
+                    <img id="otomotip2" src="img/otomotip.png" width="220px" alt="">
                 </div>
             </div>
         </div>
@@ -243,43 +244,69 @@
             <div class="scroll-container">
                 <a class="text-body" href="https://chlorinedigitalmedia.com/">
                     <div class="scroll-item">
-                        <img src="chlorin.png"  alt="">
+                        <img src="img/chlorin.png"  alt="">
                         <p class="mt-2 fw-bold" >Chlorine</p>
                     </div>
                 </a>
-                <div class="scroll-item">
-                    <img src="honda.png"  alt="">
-                    <p class="mt-2 fw-bold" >Honda</p>
-                </div>
-                <div class="scroll-item">
-                    <img src="chlorin.png"  alt="">
-                    <p class="mt-2 fw-bold" >Chlorine</p>
-                </div>
-                <div class="scroll-item">
-                    <img src="honda.png"  alt="">
-                    <p class="mt-2 fw-bold" >Honda</p>
-                </div>
-                <div class="scroll-item">
-                    <img src="chlorin.png"  alt="">
-                    <p class="mt-2 fw-bold" >Chlorine</p>
-                </div>
-                <div class="scroll-item">
-                    <img src="honda.png"  alt="">
-                    <p class="mt-2 fw-bold" >Honda</p>
-                </div>
-                <div class="scroll-item">
-                    <img src="chlorin.png"  alt="">
-                    <p class="mt-2 fw-bold" >Chlorine</p>
-                </div>
-                <div class="scroll-item">
-                    <img src="honda.png"  alt="">
-                    <p class="mt-2 fw-bold" >Honda</p>
-                </div>
+                <a href="https://www.astra-honda.com/" class="text-body">
+                    <div class="scroll-item">
+                        <img src="img/honda.png"  alt="">
+                        <p class="mt-2 fw-bold" >Honda</p>
+                    </div>
+                </a>
+                <a class="text-body" href="https://chlorinedigitalmedia.com/">
+                    <div class="scroll-item">
+                        <img src="img/chlorin.png"  alt="">
+                        <p class="mt-2 fw-bold" >Chlorine</p>
+                    </div>
+                </a>
+                <a href="https://www.astra-honda.com/" class="text-body">
+                    <div class="scroll-item">
+                        <img src="img/honda.png"  alt="">
+                        <p class="mt-2 fw-bold" >Honda</p>
+                    </div>
+                </a>
+                <a class="text-body" href="https://chlorinedigitalmedia.com/">
+                    <div class="scroll-item">
+                        <img src="img/chlorin.png"  alt="">
+                        <p class="mt-2 fw-bold" >Chlorine</p>
+                    </div>
+                </a>
+                <a href="https://www.astra-honda.com/" class="text-body">
+                    <div class="scroll-item">
+                        <img src="img/honda.png"  alt="">
+                        <p class="mt-2 fw-bold" >Honda</p>
+                    </div>
+                </a>
+                <a class="text-body" href="https://chlorinedigitalmedia.com/">
+                    <div class="scroll-item">
+                        <img src="img/chlorin.png"  alt="">
+                        <p class="mt-2 fw-bold" >Chlorine</p>
+                    </div>
+                </a>
+                <a href="https://www.astra-honda.com/" class="text-body">
+                    <div class="scroll-item">
+                        <img src="img/honda.png"  alt="">
+                        <p class="mt-2 fw-bold" >Honda</p>
+                    </div>
+                </a>
+                <a class="text-body" href="https://chlorinedigitalmedia.com/">
+                    <div class="scroll-item">
+                        <img src="img/chlorin.png"  alt="">
+                        <p class="mt-2 fw-bold" >Chlorine</p>
+                    </div>
+                </a>
+                <a href="https://www.astra-honda.com/" class="text-body">
+                    <div class="scroll-item">
+                        <img src="img/honda.png"  alt="">
+                        <p class="mt-2 fw-bold" >Honda</p>
+                    </div>
+                </a>
               </div>  
             </div>
         </div>
     </div>
-    <div class="container-fluid pt-5" id="contact">
+    <div class="container-fluid pb-5" id="contact">
         <div class="contact">
             <div class="text pt-5 pb-5" style="background-color: #6799B4;">
                 <p class="fw-bold fs-1 text-white" style="position: absolute; margin: -60px 0px 0px 100px;">< ></p>
@@ -292,7 +319,7 @@
             </div>
             <div class="container py-5">
                 <div class="row g-4">
-                    <div class="col-lg-6">
+                    <div class="col-lg-8">
                         <div class="contact-form p-4">
                             <form>
                                 <div class="row">
@@ -313,20 +340,20 @@
                                         <textarea name="" id="" rows="5" style="background-color: #ddd; border-radius: 40px;" class="form-control border-0 p-3 " placeholder="Mesage"></textarea>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-dark w-25 mt-5">Send</button>
+                                <button type="submit" class="btn btn-dark w-25 mt-5" style="border-radius: 40px; background-color: #082D33;">Send</button>
                             </form>
                         </div>
                     </div>
         
-                    <div class="col-lg-6">
-                        <div class="newsletter-box">
+                    <div class="col-lg-4">
+                        <div class="newsletter-box" >
                             <h4>Our Newsletters</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget risus vitae erat.</p>
                             <form>
                                 <div class="mb-3">
-                                    <input type="email" class="form-control" id="newsletter-email" placeholder="Email">
+                                    <input type="email" style="background-color: #ddd; border-radius: 40px;" class="form-control border-0 p-3" id="newsletter-email" placeholder="Email">
                                 </div>
-                                <button type="submit" class="btn btn-dark">Send</button>
+                                <button type="submit" class="btn btn-dark w-100" style="border-radius: 40px; background-color: #082D33;">Send</button>
                             </form>
                         </div>
                     </div>
@@ -334,17 +361,29 @@
         
                 <div class="row g-4 mt-4">
                     <div class="col-md-6">
-                        <div class="footer-contact text-center">
-                            <p><strong><i class="bi bi-telephone-fill"></i> +62 8765432198</strong></p>
+                        <div class="footer-contact text-start" style="background-color: #0C8C91;">
+                            <div class="upp d-flex">
+                                <i class="fi fi-ss-clipboard-user fs-2" style="margin-top: -10px;"></i>
+                                <p class="ms-3"><strong>+62 8765432198</strong></p>
+                            </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget risus vitae erat.</p>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="footer-contact text-center">
-                            <p><strong><i class="bi bi-envelope-fill"></i> octagram@gmail.com</strong></p>
+                        <div class="footer-contact text-start" style="background-color: #0C8C91;">
+                            <div class="upp d-flex">
+                                <i class="fi fi-ss-clipboard-user fs-2" style="margin-top: -10px;"></i>
+                                <p class="ms-3"><strong>octagram@gmail.com</strong></p>
+                            </div>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget risus vitae erat.</p>
                         </div>
                     </div>
+                    <!-- <div class="col-md-6">
+                        <div class="footer-contact text-start" style="background-color: #0C8C91;">
+                            <p><strong> <i class="fi fi-sr-envelope"></i> octagram@gmail.com</strong></p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eget risus vitae erat.</p>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         </div>
