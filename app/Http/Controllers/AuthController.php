@@ -14,8 +14,8 @@ class AuthController extends Controller
     public function viewLogin(){
         return view('auth.login');
     }
-    public function wellcome(){
-        return view('landingpage');
+    public function landingPage(){
+        return view('Features.landingpage');
     }
 
     public function login(Request $request){
@@ -26,7 +26,7 @@ class AuthController extends Controller
         $credentials = $request->only(['email', 'password']); 
 
         if (Auth::attempt($credentials)) {
-            return redirect('/test')->with('login','Welcome ,');
+            return redirect('/home')->with('login','Welcome ,');
         }
 
         return redirect()->back()->with('login','Email or Password is incorect');
