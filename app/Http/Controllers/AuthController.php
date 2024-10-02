@@ -15,7 +15,7 @@ class AuthController extends Controller
         return view('auth.login');
     }
     public function wellcome(){
-        return view('auth.welcome');
+        return view('landingpage');
     }
 
     public function login(Request $request){
