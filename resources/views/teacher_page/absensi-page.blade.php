@@ -56,7 +56,7 @@
                 <div class="col-xl-12">
                     <div class="card mb-5 shadow text-white" style="border-radius: 15px; border: none; cursor:pointer;background: #6DA5C0;">
                         <div class="row g-0 ">
-                            <div class="col-md-12">
+                            <div class="col-md-12 ">
                                 <div class="card-body d-flex">
                                     <i class="fi fi-rr-calendar-days p-1 fs-4" style="margin-right: 12px;"></i>
                                     <h5 class="pt-2" style="margin-right: 73%;">13 April 2024</h5>
