@@ -14,7 +14,9 @@ class AdminController extends Controller
 {
     public function admin() {}
     //Industry
-    public function viewAddIndustry() {}
+    public function viewAddIndustry() {
+        return view();
+    }
     public function addIndustry(Request $request)
     {
         $request->validate([
@@ -29,8 +31,12 @@ class AdminController extends Controller
         $user->role = 'industry';
         $user->password = bcrypt($request->password);
         $user->save();
+
+        return redirect();
     }
-    public function viewUpdateIndustry() {}
+    public function viewUpdateIndustry() {
+        return view();
+    }
     public function updateIndustry(Request $request)
     {
         $request->validate([
@@ -45,8 +51,12 @@ class AdminController extends Controller
         $user->role = 'industry';
         $user->password = bcrypt($request->password);
         $user->save();
+
+        return redirect();
     }
-    public function viewProfileIndustry() {}
+    public function viewProfileIndustry() {
+        return view();
+    }
     public function addProfileIndustry(Request $request)
     {
         $request->validate([
@@ -64,8 +74,12 @@ class AdminController extends Controller
         $industry->lat = $request->lat;
         $industry->long = $request->long;
         $industry->save();
+
+        return redirect();
     }
-    public function viewUpdateProfileIndustry() {}
+    public function viewUpdateProfileIndustry() {
+        return view();
+    }
     public function updateProfileIndustry(Request $request)
     {
         $request->validate([
@@ -83,10 +97,14 @@ class AdminController extends Controller
         $industry->lat = $request->lat;
         $industry->long = $request->long;
         $industry->save();
+
+        return redirect();
     }
 
     //school
-    public function viewAddSchool() {}
+    public function viewAddSchool() {
+        return view();
+    }
     public function addSchool(Request $request)
     {
         $request->validate([
@@ -101,8 +119,12 @@ class AdminController extends Controller
         $user->role = 'school';
         $user->password = bcrypt($request->password);
         $user->save();
+
+        return redirect();
     }
-    public function viewUpdateSchool() {}
+    public function viewUpdateSchool() {
+        return view();
+    }
     public function updateSchool(Request $request)
     {
         $request->validate([
@@ -117,8 +139,11 @@ class AdminController extends Controller
         $user->role = 'school';
         $user->password = bcrypt($request->password);
         $user->save();
+        return redirect();
     }
-    public function viewProfileSchool() {}
+    public function viewProfileSchool() {
+        return view();
+    }
     public function addProfileSchool(Request $request)
     {
         $request->validate([
@@ -136,8 +161,12 @@ class AdminController extends Controller
         $School->icon = $request->icon;
         $School->headmaster = $request->headmaster;
         $School->save();
+
+        return redirect();
     }
-    public function viewUpdateProfileSchool() {}
+    public function viewUpdateProfileSchool() {
+        return view();
+    }
     public function updateProfileSchool(Request $request)
     {
         $request->validate([
@@ -155,10 +184,14 @@ class AdminController extends Controller
         $School->icon = $request->icon;
         $School->headmaster = $request->headmaster;
         $School->save();
+
+        return redirect();
     }
 
     //Teacher
-    public function viewAddTeacher() {}
+    public function viewAddTeacher() {
+        return view();
+    }
     public function addTeacher(Request $request)
     {
         $request->validate([
@@ -173,8 +206,12 @@ class AdminController extends Controller
         $user->role = 'teacher';
         $user->password = bcrypt($request->password);
         $user->save();
+
+        return redirect();
     }
-    public function viewUpdateTeacher() {}
+    public function viewUpdateTeacher() {
+        return view();
+    }
     public function updateTeacher(Request $request)
     {
         $request->validate([
@@ -189,8 +226,12 @@ class AdminController extends Controller
         $user->role = 'teacher';
         $user->password = bcrypt($request->password);
         $user->save();
+
+        return redirect();
     }
-    public function viewProfileTeacher() {}
+    public function viewProfileTeacher() {
+        return view();
+    }
     public function addProfileTeacher(Request $request)
     {
         $request->validate([
@@ -204,8 +245,12 @@ class AdminController extends Controller
         $Teacher->name = $request->name;
         $Teacher->npsn = $request->npsn;
         $Teacher->save();
+
+        return redirect();
     }
-    public function viewUpdateProfileTeacher() {}
+    public function viewUpdateProfileTeacher() {
+        return view();
+    }
     public function updateProfileTeacher(Request $request)
     {
         $request->validate([
@@ -219,9 +264,13 @@ class AdminController extends Controller
         $Teacher->name = $request->name;
         $Teacher->npsn = $request->npsn;
         $Teacher->save();
+
+        return redirect();
     }
     //Advisor
-    public function viewAddAdvisor() {}
+    public function viewAddAdvisor() {
+        return view();
+    }
     public function addAdvisor(Request $request)
     {
         $request->validate([
@@ -236,8 +285,12 @@ class AdminController extends Controller
         $user->role = 'advisor';
         $user->password = bcrypt($request->password);
         $user->save();
+
+        return redirect();
     }
-    public function viewUpdateAdvisor() {}
+    public function viewUpdateAdvisor() {
+        return view();
+    }
     public function updateAdvisor(Request $request)
     {
         $request->validate([
@@ -252,8 +305,12 @@ class AdminController extends Controller
         $user->role = 'advisor';
         $user->password = bcrypt($request->password);
         $user->save();
+
+        return redirect();
     }
-    public function viewProfileAdvisor() {}
+    public function viewProfileAdvisor() {
+        return view();
+    }
     public function addProfileAdvisor(Request $request)
     {
         $request->validate([
@@ -267,8 +324,12 @@ class AdminController extends Controller
         $Advisor->name = $request->name;
         $Advisor->industry_id = $request->industry_id;
         $Advisor->save();
+
+        return redirect();
     }
-    public function viewUpdateProfileAdvisor() {}
+    public function viewUpdateProfileAdvisor() {
+        return view();
+    }
     public function updateProfileAdvisor(Request $request)
     {
         $request->validate([
@@ -282,9 +343,13 @@ class AdminController extends Controller
         $Advisor->name = $request->name;
         $Advisor->industry_id = $request->industry_id;
         $Advisor->save();
+
+        return redirect();
     }
     //Student
-    public function viewAddStudent() {}
+    public function viewAddStudent() {
+        return view();
+    }
     public function addStudent(Request $request)
     {
         $request->validate([
@@ -299,8 +364,12 @@ class AdminController extends Controller
         $user->role = 'Student';
         $user->password = bcrypt($request->password);
         $user->save();
+
+        return redirect();
     }
-    public function viewUpdateStudent() {}
+    public function viewUpdateStudent() {
+        return view();
+    }
     public function updateStudent(Request $request)
     {
         $request->validate([
@@ -315,8 +384,12 @@ class AdminController extends Controller
         $user->role = 'Student';
         $user->password = bcrypt($request->password);
         $user->save();
+
+        return redirect();
     }
-    public function viewProfileStudent() {}
+    public function viewProfileStudent() {
+        return view();
+    }
     public function addProfileStudent(Request $request)
     {
         $request->validate([
@@ -339,8 +412,13 @@ class AdminController extends Controller
         $student->address = $request->address;
         $student->major = $request->major;
         $student->npsn = $request->npsn;
+        $student->save();
+
+        return redirect();
     }
-    public function viewUpdateProfileStudent() {}
+    public function viewUpdateProfileStudent() {
+        return view();
+    }
     public function updateProfileStudent(Request $request)
     {
         $request->validate([
@@ -363,5 +441,7 @@ class AdminController extends Controller
         $student->address = $request->address;
         $student->major = $request->major;
         $student->npsn = $request->npsn;
+
+        return redirect();
     }
 }
