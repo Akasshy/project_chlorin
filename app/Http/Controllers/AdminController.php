@@ -46,12 +46,22 @@ class AdminController extends Controller
         ]);
 
         $user = User::find('id', $request->id);
-        $user->username = $request->username;
-        $user->email = $request->email;
-        $user->role = 'industry';
-        $user->password = bcrypt($request->password);
-        $user->save();
 
+        if ($user) {
+            $user->update([
+                'username' => $request->username,
+                'email' => $request->email,
+                'role' => 'industry',
+                'password' => bcrypt($request->password)
+            ]);
+        }
+
+
+        // $user->username = $request->username;
+        // $user->email = $request->email;
+        // $user->role = 'industry';
+        // $user->password = bcrypt($request->password);
+        // $user->save();
         return redirect();
     }
     public function viewProfileIndustry() {
@@ -134,11 +144,21 @@ class AdminController extends Controller
         ]);
 
         $user = User::find('id', $request->id);
-        $user->username = $request->username;
-        $user->email = $request->email;
-        $user->role = 'school';
-        $user->password = bcrypt($request->password);
-        $user->save();
+
+        if ($user) {
+            $user->update([
+                'username' => $request->username,
+                'email' => $request->email,
+                'role' => 'school',
+                'password' => bcrypt($request->password)
+            ]);
+        }
+
+        // $user->username = $request->username;
+        // $user->email = $request->email;
+        // $user->role = 'school';
+        // $user->password = bcrypt($request->password);
+        // $user->save();
         return redirect();
     }
     public function viewProfileSchool() {
@@ -221,11 +241,21 @@ class AdminController extends Controller
         ]);
 
         $user = User::find('id', $request->id);
-        $user->username = $request->username;
-        $user->email = $request->email;
-        $user->role = 'teacher';
-        $user->password = bcrypt($request->password);
-        $user->save();
+
+        if ($user) {
+            $user->update([
+                'username' => $request->username,
+                'email' => $request->email,
+                'role' => 'teacher',
+                'password' => bcrypt($request->password)
+            ]);
+        }
+
+        // $user->username = $request->username;
+        // $user->email = $request->email;
+        // $user->role = 'teacher';
+        // $user->password = bcrypt($request->password);
+        // $user->save();
 
         return redirect();
     }
@@ -300,11 +330,21 @@ class AdminController extends Controller
         ]);
 
         $user = User::find('id', $request->id);
-        $user->username = $request->username;
-        $user->email = $request->email;
-        $user->role = 'advisor';
-        $user->password = bcrypt($request->password);
-        $user->save();
+
+        if ($user) {
+            $user->update([
+                'username' => $request->username,
+                'email' => $request->email,
+                'role' => 'advisor',
+                'password' => bcrypt($request->password)
+            ]);
+        }
+
+        // $user->username = $request->username;
+        // $user->email = $request->email;
+        // $user->role = 'advisor';
+        // $user->password = bcrypt($request->password);
+        // $user->save();
 
         return redirect();
     }
@@ -379,11 +419,21 @@ class AdminController extends Controller
         ]);
 
         $user = User::find('id', $request->id);
-        $user->username = $request->username;
-        $user->email = $request->email;
-        $user->role = 'Student';
-        $user->password = bcrypt($request->password);
-        $user->save();
+
+        if ($user) {
+            $user->update([
+                'username' => $request->username,
+                'email' => $request->email,
+                'role' => 'student',
+                'password' => bcrypt($request->password)
+            ]);
+        }
+
+        // $user->username = $request->username;
+        // $user->email = $request->email;
+        // $user->role = 'Student';
+        // $user->password = bcrypt($request->password);
+        // $user->save();
 
         return redirect();
     }
