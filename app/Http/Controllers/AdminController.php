@@ -91,6 +91,9 @@ class AdminController extends Controller
         $industry->long = $request->long;
         $industry->save();
     }
+    public function deleteProfileIndustry(Request $request){
+        User::Where('id',$request->id)->first()->delete();
+    }
 
     //school
     public function viewAddSchool(){
@@ -168,6 +171,9 @@ class AdminController extends Controller
         $School->headmaster = $request->headmaster;
         $School->save();
     }
+    public function deleteProfileSchool(Request $request){
+        User::Where('id',$request->id)->first()->delete();
+    }
 
     //Teacher
     public function viewAddTeacher(){
@@ -237,6 +243,10 @@ class AdminController extends Controller
         $Teacher->npsn = $request->npsn;
         $Teacher->save();
     }
+    public function deleteProfileTeacher(Request $request){
+        User::Where('id',$request->id)->first()->delete();
+    }
+
     //Advisor
     public function viewAddAdvisor(){
 
@@ -305,6 +315,10 @@ class AdminController extends Controller
         $Advisor->industry_id = $request->industry_id;
         $Advisor->save();
     }
+    public function deleteProfileAdvisor(Request $request){
+        User::Where('id',$request->id)->first()->delete();
+    }
+
     //Student
     public function viewAddStudent(){
 
@@ -390,5 +404,8 @@ class AdminController extends Controller
         $student->address = $request->address;
         $student->major = $request->major;
         $student->npsn = $request->npsn;
+    }
+    public function deleteProfileStudent(Request $request){
+        User::Where('id',$request->id)->first()->delete();
     }
 }

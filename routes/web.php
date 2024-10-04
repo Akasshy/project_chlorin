@@ -26,7 +26,7 @@ Route::get('/admin/add/profile/industry',[AdminController::class, 'viewProfileIn
 Route::post('/admin/add/profile/industry',[AdminController::class, 'addProfileIndustry']);
 Route::get('/admin/update/profile/industry/{id}',[AdminController::class, 'viewUpdateProfileIndustry']);
 Route::post('/admin/update/profile/industry/{id}',[AdminController::class, 'updateProfileIndustry']);
-Route::get('/admin/update/profile/industry/{id}',[AdminController::class, 'deleteProfileIndustry']);
+Route::get('/admin/delete/profile/industry/{id}',[AdminController::class, 'deleteProfileIndustry']);
 
 Route::get('/admin/add/user/school',[AdminController::class, 'viewAddSchool']);
 Route::post('/admin/add/user/school',[AdminController::class, 'addSchool']);
