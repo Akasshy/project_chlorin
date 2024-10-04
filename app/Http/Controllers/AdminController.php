@@ -12,17 +12,14 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function admin(){
-
-    }
+    public function admin() {}
     //Industry
-    public function viewAddIndustry(){
-
-    }
-    public function addIndustry(Request $request){
+    public function viewAddIndustry() {}
+    public function addIndustry(Request $request)
+    {
         $request->validate([
             'username' => ['required'],
-            'email' => ['required','email'],
+            'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
 
@@ -32,32 +29,29 @@ class AdminController extends Controller
         $user->role = 'industry';
         $user->password = bcrypt($request->password);
         $user->save();
-
     }
-    public function viewUpdateIndustry(){
-
-    }
-    public function updateIndustry(Request $request){
+    public function viewUpdateIndustry() {}
+    public function updateIndustry(Request $request)
+    {
         $request->validate([
             'username' => ['required'],
-            'email' => ['required','email'],
+            'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
 
-        $user = User::find('id',$request->id);
+        $user = User::find('id', $request->id);
         $user->username = $request->username;
         $user->email = $request->email;
         $user->role = 'industry';
         $user->password = bcrypt($request->password);
         $user->save();
     }
-    public function viewProfileIndustry(){
-
-    }
-    public function addProfileIndustry(Request $request){
+    public function viewProfileIndustry() {}
+    public function addProfileIndustry(Request $request)
+    {
         $request->validate([
             'name' => ['required'],
-            'owner' => ['required','email'],
+            'owner' => ['required', 'email'],
             'address' => ['required'],
             'lat' => ['required'],
             'long' => ['required'],
@@ -71,19 +65,18 @@ class AdminController extends Controller
         $industry->long = $request->long;
         $industry->save();
     }
-    public function viewUpdateProfileIndustry(){
-
-    }
-    public function updateProfileIndustry(Request $request){
+    public function viewUpdateProfileIndustry() {}
+    public function updateProfileIndustry(Request $request)
+    {
         $request->validate([
             'name' => ['required'],
-            'owner' => ['required','email'],
+            'owner' => ['required', 'email'],
             'address' => ['required'],
             'lat' => ['required'],
             'long' => ['required'],
         ]);
-        
-        $industry = Industry::find('id',$request->id)->first();
+
+        $industry = Industry::find('id', $request->id)->first();
         $industry->name = $request->name;
         $industry->owner = $request->owner;
         $industry->address = $request->address;
@@ -91,18 +84,14 @@ class AdminController extends Controller
         $industry->long = $request->long;
         $industry->save();
     }
-    public function deleteProfileIndustry(Request $request){
-        User::Where('id',$request->id)->first()->delete();
-    }
 
     //school
-    public function viewAddSchool(){
-
-    }
-    public function addSchool(Request $request){
+    public function viewAddSchool() {}
+    public function addSchool(Request $request)
+    {
         $request->validate([
             'username' => ['required'],
-            'email' => ['required','email'],
+            'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
 
@@ -112,32 +101,29 @@ class AdminController extends Controller
         $user->role = 'school';
         $user->password = bcrypt($request->password);
         $user->save();
-
     }
-    public function viewUpdateSchool(){
-
-    }
-    public function updateSchool(Request $request){
+    public function viewUpdateSchool() {}
+    public function updateSchool(Request $request)
+    {
         $request->validate([
             'username' => ['required'],
-            'email' => ['required','email'],
+            'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
 
-        $user = User::find('id',$request->id);
+        $user = User::find('id', $request->id);
         $user->username = $request->username;
         $user->email = $request->email;
         $user->role = 'school';
         $user->password = bcrypt($request->password);
         $user->save();
     }
-    public function viewProfileSchool(){
-
-    }
-    public function addProfileSchool(Request $request){
+    public function viewProfileSchool() {}
+    public function addProfileSchool(Request $request)
+    {
         $request->validate([
             'name' => ['required'],
-            'owner' => ['required','email'],
+            'owner' => ['required', 'email'],
             'address' => ['required'],
             'lat' => ['required'],
             'long' => ['required'],
@@ -151,19 +137,18 @@ class AdminController extends Controller
         $School->headmaster = $request->headmaster;
         $School->save();
     }
-    public function viewUpdateProfileSchool(){
-
-    }
-    public function updateProfileSchool(Request $request){
+    public function viewUpdateProfileSchool() {}
+    public function updateProfileSchool(Request $request)
+    {
         $request->validate([
             'name' => ['required'],
-            'owner' => ['required','email'],
+            'owner' => ['required', 'email'],
             'address' => ['required'],
             'lat' => ['required'],
             'long' => ['required'],
         ]);
 
-        $School = School::find('id',$request->id)->first();
+        $School = School::find('id', $request->id)->first();
         $School->npsn = $request->npsn;
         $School->name = $request->name;
         $School->address = $request->address;
@@ -171,18 +156,14 @@ class AdminController extends Controller
         $School->headmaster = $request->headmaster;
         $School->save();
     }
-    public function deleteProfileSchool(Request $request){
-        User::Where('id',$request->id)->first()->delete();
-    }
 
     //Teacher
-    public function viewAddTeacher(){
-
-    }
-    public function addTeacher(Request $request){
+    public function viewAddTeacher() {}
+    public function addTeacher(Request $request)
+    {
         $request->validate([
             'username' => ['required'],
-            'email' => ['required','email'],
+            'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
 
@@ -192,31 +173,28 @@ class AdminController extends Controller
         $user->role = 'teacher';
         $user->password = bcrypt($request->password);
         $user->save();
-
     }
-    public function viewUpdateTeacher(){
-
-    }
-    public function updateTeacher(Request $request){
+    public function viewUpdateTeacher() {}
+    public function updateTeacher(Request $request)
+    {
         $request->validate([
             'username' => ['required'],
-            'email' => ['required','email'],
+            'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
 
-        $user = User::find('id',$request->id);
+        $user = User::find('id', $request->id);
         $user->username = $request->username;
         $user->email = $request->email;
         $user->role = 'teacher';
         $user->password = bcrypt($request->password);
         $user->save();
     }
-    public function viewProfileTeacher(){
-
-    }
-    public function addProfileTeacher(Request $request){
+    public function viewProfileTeacher() {}
+    public function addProfileTeacher(Request $request)
+    {
         $request->validate([
-            'profile_image' => ['required','email'],
+            'profile_image' => ['required', 'email'],
             'name' => ['required'],
             'npsn' => ['required'],
         ]);
@@ -227,34 +205,28 @@ class AdminController extends Controller
         $Teacher->npsn = $request->npsn;
         $Teacher->save();
     }
-    public function viewUpdateProfileTeacher(){
-
-    }
-    public function updateProfileTeacher(Request $request){
+    public function viewUpdateProfileTeacher() {}
+    public function updateProfileTeacher(Request $request)
+    {
         $request->validate([
-            'profile_image' => ['required','email'],
+            'profile_image' => ['required', 'email'],
             'name' => ['required'],
             'npsn' => ['required'],
         ]);
 
-        $Teacher = Teacher::find('id',$request->id)->first();
+        $Teacher = Teacher::find('id', $request->id)->first();
         $Teacher->profile_image = $request->profile_image;
         $Teacher->name = $request->name;
         $Teacher->npsn = $request->npsn;
         $Teacher->save();
     }
-    public function deleteProfileTeacher(Request $request){
-        User::Where('id',$request->id)->first()->delete();
-    }
-
     //Advisor
-    public function viewAddAdvisor(){
-
-    }
-    public function addAdvisor(Request $request){
+    public function viewAddAdvisor() {}
+    public function addAdvisor(Request $request)
+    {
         $request->validate([
             'username' => ['required'],
-            'email' => ['required','email'],
+            'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
 
@@ -264,31 +236,28 @@ class AdminController extends Controller
         $user->role = 'advisor';
         $user->password = bcrypt($request->password);
         $user->save();
-
     }
-    public function viewUpdateAdvisor(){
-
-    }
-    public function updateAdvisor(Request $request){
+    public function viewUpdateAdvisor() {}
+    public function updateAdvisor(Request $request)
+    {
         $request->validate([
             'username' => ['required'],
-            'email' => ['required','email'],
+            'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
 
-        $user = User::find('id',$request->id);
+        $user = User::find('id', $request->id);
         $user->username = $request->username;
         $user->email = $request->email;
         $user->role = 'advisor';
         $user->password = bcrypt($request->password);
         $user->save();
     }
-    public function viewProfileAdvisor(){
-
-    }
-    public function addProfileAdvisor(Request $request){
+    public function viewProfileAdvisor() {}
+    public function addProfileAdvisor(Request $request)
+    {
         $request->validate([
-            'profile_image' => ['required','email'],
+            'profile_image' => ['required', 'email'],
             'name' => ['required'],
             'insdutry_id' => ['required'],
         ]);
@@ -299,34 +268,28 @@ class AdminController extends Controller
         $Advisor->industry_id = $request->industry_id;
         $Advisor->save();
     }
-    public function viewUpdateProfileAdvisor(){
-
-    }
-    public function updateProfileAdvisor(Request $request){
+    public function viewUpdateProfileAdvisor() {}
+    public function updateProfileAdvisor(Request $request)
+    {
         $request->validate([
-            'profile_image' => ['required','email'],
+            'profile_image' => ['required', 'email'],
             'name' => ['required'],
             'insdutry_id' => ['required'],
         ]);
 
-        $Advisor = Advisor::find('id',$request->id)->first();
+        $Advisor = Advisor::find('id', $request->id)->first();
         $Advisor->profile_image = $request->profile_image;
         $Advisor->name = $request->name;
         $Advisor->industry_id = $request->industry_id;
         $Advisor->save();
     }
-    public function deleteProfileAdvisor(Request $request){
-        User::Where('id',$request->id)->first()->delete();
-    }
-
     //Student
-    public function viewAddStudent(){
-
-    }
-    public function addStudent(Request $request){
+    public function viewAddStudent() {}
+    public function addStudent(Request $request)
+    {
         $request->validate([
             'username' => ['required'],
-            'email' => ['required','email'],
+            'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
 
@@ -336,38 +299,35 @@ class AdminController extends Controller
         $user->role = 'Student';
         $user->password = bcrypt($request->password);
         $user->save();
-
     }
-    public function viewUpdateStudent(){
-
-    }
-    public function updateStudent(Request $request){
+    public function viewUpdateStudent() {}
+    public function updateStudent(Request $request)
+    {
         $request->validate([
             'username' => ['required'],
-            'email' => ['required','email'],
+            'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
 
-        $user = User::find('id',$request->id);
+        $user = User::find('id', $request->id);
         $user->username = $request->username;
         $user->email = $request->email;
         $user->role = 'Student';
         $user->password = bcrypt($request->password);
         $user->save();
     }
-    public function viewProfileStudent(){
-
-    }
-    public function addProfileStudent(Request $request){
+    public function viewProfileStudent() {}
+    public function addProfileStudent(Request $request)
+    {
         $request->validate([
             'user_id' => 'required',
             'nisn' => 'required',
-            'profile_image'=>'required',
-            'full_name'=>'required',
-            'birth_day'=>'required',
-            'address'=>'required',
-            'major'=>'required',
-            'npsn'=>'required',
+            'profile_image' => 'required',
+            'full_name' => 'required',
+            'birth_day' => 'required',
+            'address' => 'required',
+            'major' => 'required',
+            'npsn' => 'required',
         ]);
 
         $student = new Student();
@@ -380,19 +340,18 @@ class AdminController extends Controller
         $student->major = $request->major;
         $student->npsn = $request->npsn;
     }
-    public function viewUpdateProfileStudent(){
-
-    }
-    public function updateProfileStudent(Request $request){
+    public function viewUpdateProfileStudent() {}
+    public function updateProfileStudent(Request $request)
+    {
         $request->validate([
             'user_id' => 'required',
             'nisn' => 'required',
-            'profile_image'=>'required',
-            'full_name'=>'required',
-            'birth_day'=>'required',
-            'address'=>'required',
-            'major'=>'required',
-            'npsn'=>'required',
+            'profile_image' => 'required',
+            'full_name' => 'required',
+            'birth_day' => 'required',
+            'address' => 'required',
+            'major' => 'required',
+            'npsn' => 'required',
         ]);
 
         $student = Student::find($$request->id)->first();
@@ -404,8 +363,5 @@ class AdminController extends Controller
         $student->address = $request->address;
         $student->major = $request->major;
         $student->npsn = $request->npsn;
-    }
-    public function deleteProfileStudent(Request $request){
-        User::Where('id',$request->id)->first()->delete();
     }
 }
