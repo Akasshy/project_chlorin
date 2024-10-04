@@ -140,17 +140,17 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="fw-bold">
-                                            <td>1</td>
-                                            <td>090890687578567</td>
-                                            <td>Angel</td>
-                                            <td>
-                                                <a href="" class="btn text-white fw-bold"
-                                                    style="background: #294D61;">Pilih</a>
-                                            </td>
-
-                                        </tr>
-
+                                        @foreach ($student as $key => $item)
+                                            <tr class="fw-bold">
+                                                <td>{{ $key+1 }}</td>
+                                                <td>{{ $item->nisn }}</td>
+                                                <td>{{ $item->full_name }}</td>
+                                                <td>
+                                                    <a href="/dashbord/detail/{{ $item->id }}" class="btn text-white fw-bold"
+                                                        style="background: #294D61;">Pilih</a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

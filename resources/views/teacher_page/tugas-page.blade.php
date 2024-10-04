@@ -70,16 +70,16 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="fw-bold">
-                                            <td>1</td>
-                                            <td>[HI-01 Pencatatan Perselisihan]</td>
-                                            <td>
-                                                <a href="" class="btn text-white fw-bold"
-                                                    style="background: #294D61;">Pilih</a>
-                                            </td>
-
-                                        </tr>
-
+                                        @foreach ($task as $key => $item)
+                                            <tr class="fw-bold">
+                                                <td>{{ $key+1 }}</td>
+                                                <td>{{ $item->name }}</td>
+                                                <td>
+                                                    <a href="/task/detail/{{ $item->id }}" class="btn text-white fw-bold"
+                                                        style="background: #294D61;">Pilih</a>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

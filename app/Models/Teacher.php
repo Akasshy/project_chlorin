@@ -5,12 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Advisor extends Model
+class Teacher extends Model
 {
     use HasFactory;
+
     protected $fillable = [
         'profile_image',
         'name',
-        'industry_id',
+        'npsn',
     ];
 }

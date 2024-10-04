@@ -13,10 +13,10 @@
                 <a href="" class="nav-link text-white fs-5"><i class="fi fi-rr-envelope pe-3"></i> Inbox</a>
             </li>
             <li id="nav" class="nav-item ps-3">
-                <a href="/tugas-page" class="nav-link text-white fs-5"><i class="fi fi-rs-note pe-3"></i> Tugas</a>
+                <a href="/task-page" class="nav-link text-white fs-5"><i class="fi fi-rs-note pe-3"></i> Tugas</a>
             </li>
             <li id="nav" class="nav-item ps-3">
-                <a href="/absensi-page" class="nav-link text-white fs-5"><i class="fi fi-rs-team-check pe-3"></i> Absesnsi</a>
+                <a href="/attendance-page" class="nav-link text-white fs-5"><i class="fi fi-rs-team-check pe-3"></i> Absesnsi</a>
             </li>
             <li id="nav" class="nav-item ps-3">
                 <a href="dashboard.html" class="nav-link text-white fs-5"><i class="fi fi-rs-home pe-3"></i>Bursa Kerja</a>
