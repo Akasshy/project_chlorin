@@ -12,7 +12,11 @@ use Illuminate\Http\Request;
 
 class AdminController extends Controller
 {
-    public function admin() {}
+    public function admin() 
+    {
+        $data['student']=Student::all();
+        return view('admin/beranda',$data  );
+    }
     //Industry
     public function viewAddIndustry() {
         return view();
