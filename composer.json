@@ -7,7 +7,12 @@
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.9",
+<<<<<<< HEAD
         "laravel/tinker": "^2.9"
+=======
+        "laravel/tinker": "^2.9",
+        "realrashid/sweet-alert": "^7.2"
+>>>>>>> f2efa97b39deb9e02287b7f10dec6a90d0e842ed
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
