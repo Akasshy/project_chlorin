@@ -48,12 +48,8 @@
             </div>
             <div class="col-md-6 mt-5">
                 <div class="form " style=" border: 2px solid #F0F0F0 ; border-bottom: 4px solid #F0F0F0; border-radius: 50px; border-top: none; ">
-<<<<<<< HEAD
-                    <form class="p-5">
-=======
                     <form class="p-5" method="POST" action="/auth">
                         @csrf
->>>>>>> f2efa97b39deb9e02287b7f10dec6a90d0e842ed
                         <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
                             <h2 class=" me-3 fw-bold mb-3">Login</h2>    
                         </div>                
@@ -65,11 +61,7 @@
                         <div data-mdb-input-init class="form-outline mb-3 mt-3">
                             <label class="form-label fw-bold ms-3" for="form3Example2">Email</label>
                             <input type="email" id="form3Example2" style="background-color: #F0F0F0; border-radius: 20px;" class="form-control form-control-lg"
-<<<<<<< HEAD
-                                placeholder="example@gmail.com" />
-=======
                                 placeholder="example@gmail.com" name="email" required value="{{ old('email') }}">
->>>>>>> f2efa97b39deb9e02287b7f10dec6a90d0e842ed
                         </div>
                         <div data-mdb-input-init class="form-outline mb-3 mt-3">
                             <!-- {{-- <div class="input-group-append">
@@ -78,11 +70,7 @@
                             <div class="input-container">
                                 <label class="form-label fw-bold ms-3" for="password">Password</label>
                                 <input type="password" id="password" style="background-color: #F0F0F0; border-radius: 20px;" class="form-control form-control-lg"
-<<<<<<< HEAD
-                                    placeholder="admin#123" />
-=======
                                     placeholder="admin#123" name="password" required value="{{ old('password') }}">
->>>>>>> f2efa97b39deb9e02287b7f10dec6a90d0e842ed
                                 <i class="fas fa-eye input-icon" id="toggle-icon" onclick="togglePasswordVisibility()"></i>
                             </div> 
                         </div>
@@ -98,11 +86,7 @@
                         </div>
     
                         <div class="text-center text-lg-start mt-4 " style="padding-top: 100px;">
-<<<<<<< HEAD
-                            <button type="button" data-mdb-button-init data-mdb-ripple-init
-=======
                             <button type="submit" data-mdb-button-init data-mdb-ripple-init
->>>>>>> f2efa97b39deb9e02287b7f10dec6a90d0e842ed
                                 class="btn btn-lg w-100  text-center fw-bold"
                                 style="padding-left: 2.5rem; padding-right: 2.5rem; border-radius: 30px; background-color: #294D61; color: white;">Login</button>
                             <!-- <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="register.html"
