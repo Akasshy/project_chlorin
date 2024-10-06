@@ -140,11 +140,7 @@
                         <a class="nav-link active text-body" aria-current="page" href="#company">Company</a>
                     </li>
                     <li class="nav-item" style="margin-left: 14rem;">
-<<<<<<< HEAD
-                        <a class="sigin nav-link ps-5 pe-5"  style=" border-radius: 20px;" href="login.html"">Sig In</a>
-=======
                         <a class="sigin nav-link ps-5 pe-5"  style=" border-radius: 20px;" href="/login">Sig In</a>
->>>>>>> f2efa97b39deb9e02287b7f10dec6a90d0e842ed
                     </li>
                 </ul>
               </div>

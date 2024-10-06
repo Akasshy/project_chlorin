@@ -1,4 +1,4 @@
-@extends('template.pasang-template-teacher')
+@extends('template.pasang-template-admin')
 @section('content')
 <header class="main-header">
     <!-- Header Navbar -->
@@ -16,12 +16,12 @@
                     </a>
                 </li>
                 <!-- Notifications -->
-                <li class="dropdown notifications-menu pt-15">
+                <li class="dropdown notifications-menu pt-15" >
                     <h3>Dashboard</h3>
                 </li>
 
                 <!-- User Account-->
-                <li class="dropdown user user-menu">
+                <li class="dropdown user user-menu" style="margin-left:68rem">
                     <a href="#" class="waves-effect waves-light rounded dropdown-toggle p-0" data-toggle="dropdown"
                         title="User">
                         <img src="../images/avatar/1.jpg" alt="">
@@ -125,7 +125,7 @@
                 <div class="col-12">
                     <div class="box">
                         <div class="box-header with-border">
-                            <h3 class="box-title text-dark">Siswa</h3>
+                            <h3 class="box-title" style="color: #470B77">Siswa</h3>
                         </div>
                         <!-- /.box-header -->
                         <div class="box-body">

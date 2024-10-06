@@ -8,12 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class Advisor extends Model
 {
     use HasFactory;
-<<<<<<< HEAD
-=======
+    
     protected $fillable = [
         'profile_image',
         'name',
         'industry_id',
     ];
->>>>>>> f2efa97b39deb9e02287b7f10dec6a90d0e842ed
 }
