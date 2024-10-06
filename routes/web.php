@@ -1,28 +1,17 @@
 <?php
 
-<<<<<<< HEAD
-use App\Http\Controllers\AuthController;
-=======
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Teacher;
->>>>>>> f2efa97b39deb9e02287b7f10dec6a90d0e842ed
 // use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-<<<<<<< HEAD
-    return redirect('/login');
-=======
     return redirect('/landing-page');
->>>>>>> f2efa97b39deb9e02287b7f10dec6a90d0e842ed
 });
 
 Route::get('/login',[AuthController::class,'viewLogin']);
 Route::post('/auth',[AuthController::class,'login']);
-<<<<<<< HEAD
-Route::get('/test',[AuthController::class,'wellcome']);
-=======
 Route::get('/landing-page',[AuthController::class,'landingpage']);
 
 //admin-page
@@ -100,4 +89,4 @@ Route::post('/student/update/profile/{id}',[Teacher::class,'updateProfileStudent
 Route::post('/student/delete/{id}',[Teacher::class,'deleteStudent']);
 
 route::get('/intership-request',[Teacher::class,'intershipRequest']);
->>>>>>> f2efa97b39deb9e02287b7f10dec6a90d0e842ed
+    
