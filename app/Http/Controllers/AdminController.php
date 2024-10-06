@@ -15,11 +15,37 @@ class AdminController extends Controller
     public function admin() 
     {
         $data['student']=Student::all();
-        return view('admin/beranda',$data  );
+        return view('admin.beranda',$data  );
     }
+    public function viewIndustry() 
+    {
+        $data['industry']=Industry::all();
+        return view('admin.industri',$data  );
+    }
+    public function viewSchool() 
+    {
+        $data['school']=School::all();
+        return view('admin.school',$data  );
+    }
+    public function viewTeacher() 
+    {
+        $data['teacher']=Teacher::all();
+        return view('admin.teacher',$data  );
+    }
+    public function viewAdvisor() 
+    {
+        $data['advisor']=Advisor::all();
+        return view('admin.advisor',$data  );
+    }
+    public function viewStudent() 
+    {
+        $data['student']=Student::all();
+        return view('admin.student',$data  );
+    }
+
     //Industry
     public function viewAddIndustry() {
-        return view();
+        return view('admin.add.add-industry');
     }
     public function addIndustry(Request $request)
     {

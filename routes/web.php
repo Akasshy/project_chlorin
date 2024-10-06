@@ -18,6 +18,7 @@ Route::get('/landing-page',[AuthController::class,'landingpage']);
 //admin-page
 Route::get('/admin-page',[AdminController::class, 'admin']);
 
+Route::get('/admin/industry',[AdminController::class, 'viewIndustry']);
 Route::get('/admin/add/user/industry',[AdminController::class, 'viewAddIndustry']);
 Route::post('/admin/add/user/industry',[AdminController::class, 'addIndustry']);
 Route::get('/admin/update/user/industry/{id}',[AdminController::class, 'viewUpdateIndustry']);
@@ -29,6 +30,7 @@ Route::get('/admin/update/profile/industry/{id}',[AdminController::class, 'viewU
 Route::post('/admin/update/profile/industry/{id}',[AdminController::class, 'updateProfileIndustry']);
 Route::get('/admin/delete/profile/industry/{id}',[AdminController::class, 'deleteProfileIndustry']);
 
+Route::get('/admin/school',[AdminController::class, 'viewSchool']);
 Route::get('/admin/add/user/school',[AdminController::class, 'viewAddSchool']);
 Route::post('/admin/add/user/school',[AdminController::class, 'addSchool']);
 Route::get('/admin/update/user/school/{id}',[AdminController::class, 'viewUpdateSchool']);
@@ -40,6 +42,7 @@ Route::get('/admin/update/profile/school/{id}',[AdminController::class, 'viewUpd
 Route::post('/admin/update/profile/school/{id}',[AdminController::class, 'updateSchool']);
 Route::get('/admin/delete/profile/school/{id}',[AdminController::class, 'deleteProfileSchool']);
 
+Route::get('/admin/teacher',[AdminController::class, 'viewTeacher']);
 Route::get('/admin/add/user/teacher',[AdminController::class, 'viewAddTeacher']);
 Route::post('/admin/add/user/teacher',[AdminController::class, 'addTeacher']);
 Route::get('/admin/update/user/teacher/{id}',[AdminController::class, 'viewUpdateTeacher']);
@@ -51,6 +54,7 @@ Route::get('/admin/update/profile/teacher/{id}',[AdminController::class, 'viewUp
 Route::post('/admin/update/profile/teacher/{id}',[AdminController::class, 'updateProfileTeacher']);
 Route::get('/admin/delete/profile/teacher/{id}',[AdminController::class, 'deleteProfileTeacher']);
 
+Route::get('/admin/advisor',[AdminController::class, 'viewAdvisor']);
 Route::get('/admin/add/user/advisor',[AdminController::class, 'viewAddAdvisor']);
 Route::post('/admin/add/user/advisor',[AdminController::class, 'AddAdvisor']);
 Route::get('/admin/update/user/advisor/{id}',[AdminController::class, 'viewUpdateAdvisor']);
@@ -62,6 +66,7 @@ Route::get('/admin/update/profile/advisor/{id}',[AdminController::class, 'viewUp
 Route::post('/admin/update/profile/advisor/{id}',[AdminController::class, 'updateProfileAdvisor']);
 Route::get('/admin/delete/profile/advisor/{id}',[AdminController::class, 'deleteProfileAdvisor']);
 
+Route::get('/admin/student',[AdminController::class, 'viewStudent']);
 Route::get('/admin/add/user/student',[AdminController::class, 'viewAddStudent']);
 Route::post('/admin/add/user/student',[AdminController::class, 'addStudent']);
 Route::get('/admin/update/user/student/{id}',[AdminController::class, 'viewUpdateStudent']);
