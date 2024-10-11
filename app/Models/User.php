@@ -11,7 +11,7 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class User extends Authenticatable implements JWTSubject
 {
-    use HasFactory, Notifiable,HasApiTokens;
+    use HasFactory, Notifiable, HasApiTokens;
 
     /**
      * The attributes that are mass assignable.
@@ -57,6 +57,9 @@ class User extends Authenticatable implements JWTSubject
         return [];
     }
     public function profile(){
-        return $this->belongsTo(Student::class, 'user_id');
+        if ($this->role === "admin") {
+              
+        }
+        return $this->hasOne(Student::class, 'user_id');
     }
 }

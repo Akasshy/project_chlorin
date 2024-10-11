@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Advisor;
 use App\Models\Industry;
+use App\Models\Internship;
 use App\Models\School;
 use App\Models\Student;
 use App\Models\Task;
@@ -32,7 +33,7 @@ class DatabaseSeeder extends Seeder
             'role'=> 'student',
             'password' => bcrypt('1234')
         ]);
-        
+
         School::create([
             'npsn' => "88994422",
             'name' => 'SMK YPC Tasikmalaya',
@@ -83,5 +84,10 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Mumu',
         //     'industry' => '1',
         // ]);
+        Internship::create([
+            'student_id' => 1,
+            'industry_id' => 1,
+            'is_accepted' => true
+        ]);
     }
 }

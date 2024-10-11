@@ -11,15 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('attendances', function (Blueprint $table) {
+        Schema::create('internships', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('student_id');
-            $table->text('description')->nullable();
-            $table->enum('status', ['present','absent','leave']);
-            $table->string('face_image');
-            $table->string('distance');
-            $table->timestamps();
+            $table->unsignedBigInteger('industry_id');
+            $table->boolean('is_accepted')->default(false);
             $table->foreign('student_id')->references('id')->on('students')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('industry_id')->references('id')->on('industries')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->timestamps();
         });
     }
 
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('attendances');
+        Schema::dropIfExists('internships');
     }
 };
