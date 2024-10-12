@@ -57,6 +57,13 @@ class StudentController extends Controller
     //     }
     //     //can beress
     // }
+
+    public function updateStudent(Request $request){
+        $student = Auth::guard('api')->user();
+        User::where('id', $student->id)->update([
+            'password' => $request->password
+        ], 200);
+    }
     public function task(Request $request)
     {
         $user = Auth::guard('api')->user()->profile;
@@ -208,6 +215,11 @@ class StudentController extends Controller
         //         'message' => "Upload kehadiran gagal"
         //     ], 409);
         // }
+    }
+
+    public function history(){
+        $student = Auth::guard('api')->user()->profile;
+        $absence = Attendance::where('student_id')->get();
     }
 
     // public function absensiPulang(Request $request)

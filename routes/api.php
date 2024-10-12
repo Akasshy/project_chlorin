@@ -15,12 +15,12 @@ Route::post('/auth/login', [AuthApiController::class, 'login']);
 Route::get('/auth/logout', [AuthApiController::class, 'logout']);
 Route::get('/home', [StudentController::class, 'home']);
 Route::post('/absence', [StudentController::class, 'absence']);
-// Route::absence('/absence/history', [StudentController::class, 'history']);
+Route::get('/absence/history', [StudentController::class, 'history']);
 Route::get('/task', [StudentController::class, 'task']);
 Route::get('/setings', [StudentController::class,'setings']);
 Route::get('/profile/get', [StudentController::class, 'getProfile']);
 Route::post('/profile/update', [StudentController::class, 'updateProfile']);
 Route::get('/user/get', [StudentController::class, 'getStudent']);
-// Route::post('/user/update', [StudentController::class, 'updateStudent']);
+Route::post('/user/update', [StudentController::class, 'updateStudent']);
 
 
