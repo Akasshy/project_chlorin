@@ -43,8 +43,8 @@
                     </a>
                 </li>
                 <li class="pt-15 d-flex" >
-                    <a href="/industri-page" class="ml-3 fw-bold"  style="text-decoration:none ; color : #294D61"><i class="fi fi-rr-angle-left fs-3 fw-bold"></i></a> <!-- Margin left for left spacing -->
-                    <h3 class="ml-3 fw-bold">Edit Industry</h3> <!-- Margin left for left spacing -->
+                    <a href="/admin/student" class="ml-3 fw-bold"  style="text-decoration:none ; color : #294D61"><i class="fi fi-rr-angle-left fs-3 fw-bold"></i></a> <!-- Margin left for left spacing -->
+                    <h3 class="ml-3 fw-bold">Create Student</h3> <!-- Margin left for left spacing -->
                 </li>
                 <li class="ml-auto"> <!-- Pushes user account to the right -->
                     <!-- User Account-->
@@ -74,47 +74,27 @@
             <div class="container" >
                 <div class="content w-100">
                     <div class="profile p-5  bg-white" style="border-radius: 50px;" >
-                        <form action="/admin/update/profile/industry/" class="p-3 pt-5" method="post">
+                        <form action="/admin/add/user/student" class="p-3 pt-5" method="post">
+                            @csrf
                             <div class="row">
-                                <div class="col-md-12">
+                                <div class="col-md-12 mb-3">
                                     <div class="row">
-                                        <div class="col-md-10">
-                                            <label for="nisn" class="ms-2">Owner</label>
-                                            <input  class="form-control mt-2 border-0 pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" type="text" name="nisn" id="nisn" value="{{ $industry->owner }}">
-                                        </div>
-                                        <div class="col-md-2" style="margin-top: -50px;">
-                                            <div class="row">
-                                                <div class="col-md-12 " >
-                                                    <img src="https://via.placeholder.com/100" alt="Preview" class="image-preview">
-                                                </div>
-                                                <div class="col-md-12">
-                                                    <input type="file" id="fileInput" class="file-input" accept="image/*">
-                                                    <label for="fileInput" class="custom-label " >Edit Photo</label>
-                                                </div>
-                                            </div>
+                                        <div class="col-md-12">
+                                            <label for="nisn" class="ms-2">Username</label>
+                                            <input class="form-control mt-2 border-0 pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" type="text" name="nisn" id="nisn">
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-12" style="margin-top:-30px ;">
-                                    <label for="nama" class="ms-2">Nama Industry</label>
-                                    <input type="text" class="form-control mt-2 border-0 pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6; " name="name" value="{{$industry->name}}" id="nama">
+                                <div class="col-md-12">
+                                    <label for="email" class="ms-2">Email</label>
+                                    <input class="form-control mt-2 border-0 pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" type="email" name="email" id="email">
                                 </div>
-
-                                <div class="col-md-12 mt-3">
-                                    <label for="alamat" class="ms-2">Alamat</label>
-                                    <textarea name="address " class="form-control mt-2 border-0" style="border-radius: 12px; background-color: #F6F6F6;" id="alamat" rows="4">{{$industry->address}}</textarea>
+                                <div class="col-md-12">
+                                    <label for="password" class="ms-2">Password</label>
+                                    <input class="form-control mt-2 border-0 pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" type="password" name="password" id="password">
                                 </div>
-                                <div class="col-md-12 mt-3" >
-                                    <label for="npsn" class="ms-2">Lattitud</label>
-                                    <input type="text" class="form-control mt-2 border-0  pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" name="latitude" id="npsn">
-                                </div>
-                                <div class="col-md-12 mt-3" >
-                                    <label for="npsn" class="ms-2">Longtitud</label>
-                                    <input type="text" class="form-control mt-2 border-0  pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" name="longitude" id="npsn">
-                                </div>
-                                <div class="col-md-12 mt-5">
-                                <a href="/shool-page" class="btn btn-danger pe-5 ps-5 me-5 text-white" style="border-radius:20px">Hapus</a>
-                                <button class="btn ps-5 pe-5 text-white " style="background-color: #294D61; border-radius: 20px;" type="submit">Edit</button>
+                                <div class="col-md-12  pt-5">
+                                    <button class="btn ps-5 pe-5 text-white " style="background-color: #294D61; border-radius: 20px;" type="submit">Lanjut</button>
                                 </div>
                             </div>
                         </form>

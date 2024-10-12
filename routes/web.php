@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect('/landing-page');
+    // return view('admin.add-user.add-industry');
 });
 
 Route::get('/login',[AuthController::class,'viewLogin']);

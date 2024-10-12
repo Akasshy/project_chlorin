@@ -10,34 +10,36 @@ use App\Models\Teacher;
 use App\Models\User;
 use Illuminate\Http\Request;
 
+use function Illuminate\Log\log;
+
 class AdminController extends Controller
 {
-    public function admin() 
+    public function admin()
     {
         $data['student']=Student::all();
         return view('admin.beranda',$data  );
     }
-    public function viewIndustry() 
+    public function viewIndustry()
     {
         $data['industry']=Industry::all();
         return view('admin.industri',$data  );
     }
-    public function viewSchool() 
+    public function viewSchool()
     {
         $data['school']=School::all();
         return view('admin.school',$data  );
     }
-    public function viewTeacher() 
+    public function viewTeacher()
     {
         $data['teacher']=Teacher::all();
         return view('admin.teacher',$data  );
     }
-    public function viewAdvisor() 
+    public function viewAdvisor()
     {
         $data['advisor']=Advisor::all();
         return view('admin.advisor',$data  );
     }
-    public function viewStudent() 
+    public function viewStudent()
     {
         $data['student']=Student::all();
         return view('admin.student',$data  );
@@ -45,7 +47,7 @@ class AdminController extends Controller
 
     //Industry
     public function viewAddIndustry() {
-        return view('admin.add.add-industry');
+        return view('admin.add-user.add-industry');
     }
     public function addIndustry(Request $request)
     {
@@ -62,7 +64,7 @@ class AdminController extends Controller
         $user->password = bcrypt($request->password);
         $user->save();
 
-        return redirect();
+        return redirect('/admin/add/profile/industry');
     }
     public function viewUpdateIndustry() {
         return view();
@@ -117,8 +119,10 @@ class AdminController extends Controller
 
         return redirect();
     }
-    public function viewUpdateProfileIndustry() {
-        return view();
+    public function viewUpdateProfileIndustry($id) {
+        $data['industry'] = Industry::find($id);
+
+        return view('admin.edit.edit-industry',$data);
     }
     public function updateProfileIndustry(Request $request)
     {
@@ -143,7 +147,7 @@ class AdminController extends Controller
 
     //school
     public function viewAddSchool() {
-        return view();
+        return view('admin.add-user.add-school');
     }
     public function addSchool(Request $request)
     {
@@ -160,7 +164,7 @@ class AdminController extends Controller
         $user->password = bcrypt($request->password);
         $user->save();
 
-        return redirect();
+        return redirect('/admin/add/profile/school');
     }
     public function viewUpdateSchool() {
         return view();
@@ -215,7 +219,7 @@ class AdminController extends Controller
         return redirect();
     }
     public function viewUpdateProfileSchool() {
-        return view();
+        return view('admin.edit.edit-school');
     }
     public function updateProfileSchool(Request $request)
     {
@@ -240,7 +244,7 @@ class AdminController extends Controller
 
     //Teacher
     public function viewAddTeacher() {
-        return view();
+        return view('admin.add-user.add-teacher');
     }
     public function addTeacher(Request $request)
     {
@@ -257,7 +261,7 @@ class AdminController extends Controller
         $user->password = bcrypt($request->password);
         $user->save();
 
-        return redirect();
+        return redirect('/admin/add/profile/teacher');
     }
     public function viewUpdateTeacher() {
         return view();
@@ -309,7 +313,8 @@ class AdminController extends Controller
         return redirect();
     }
     public function viewUpdateProfileTeacher() {
-        return view();
+        return view('admin.edit.edit-teacher');
+
     }
     public function updateProfileTeacher(Request $request)
     {
@@ -329,7 +334,7 @@ class AdminController extends Controller
     }
     //Advisor
     public function viewAddAdvisor() {
-        return view();
+        return view('admin.add-user.add-advisor');
     }
     public function addAdvisor(Request $request)
     {
@@ -346,7 +351,7 @@ class AdminController extends Controller
         $user->password = bcrypt($request->password);
         $user->save();
 
-        return redirect();
+        return redirect('/admin/add/profile/advisor');
     }
     public function viewUpdateAdvisor() {
         return view();
@@ -398,7 +403,8 @@ class AdminController extends Controller
         return redirect();
     }
     public function viewUpdateProfileAdvisor() {
-        return view();
+        return view('admin.edit.edit-advisor');
+
     }
     public function updateProfileAdvisor(Request $request)
     {
@@ -418,24 +424,26 @@ class AdminController extends Controller
     }
     //Student
     public function viewAddStudent() {
-        return view();
+        log('get_view');
+        return view('admin.add-user.add-student');
     }
     public function addStudent(Request $request)
     {
-        $request->validate([
-            'username' => ['required'],
-            'email' => ['required', 'email'],
-            'password' => ['required'],
-        ]);
+        // $request->validate([
+        //     'username' => ['required'],
+        //     'email' => ['required', 'email'],
+        //     'password' => ['required'],
+        // ]);
 
         $user = new User();
         $user->username = $request->username;
         $user->email = $request->email;
-        $user->role = 'Student';
+        $user->role = 'student';
         $user->password = bcrypt($request->password);
         $user->save();
 
-        return redirect();
+        log('success');
+        return redirect('/admin/add/profile/student');
     }
     public function viewUpdateStudent() {
         return view();
@@ -497,7 +505,8 @@ class AdminController extends Controller
         return redirect();
     }
     public function viewUpdateProfileStudent() {
-        return view();
+        return view('admin.edit.edit-student');
+
     }
     public function updateProfileStudent(Request $request)
     {

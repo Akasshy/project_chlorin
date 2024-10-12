@@ -219,7 +219,11 @@ class StudentController extends Controller
 
     public function history(){
         $student = Auth::guard('api')->user()->profile;
-        $absence = Attendance::where('student_id')->get();
+        $absence = Attendance::where('student_id', $student->id)->get();
+        return response()->json([
+            'message' => 'Get History success',
+            'absence' => $absence
+        ]);
     }
 
     // public function absensiPulang(Request $request)

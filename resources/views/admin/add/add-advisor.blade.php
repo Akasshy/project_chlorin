@@ -70,8 +70,8 @@
 </header>
 <div class="content-wrapper" style="margin-top:-20px; ">
     <div class="container-full">
-        <section class="content">   
-            <div class="container" >              
+        <section class="content">
+            <div class="container" >
                 <div class="content w-100">
                     <div class="profile p-5  bg-white" style="border-radius: 50px;" >
                         <form action="" class="p-3 pt-5" method="post">
@@ -102,8 +102,8 @@
                                         <option value="">Telkom</option>
                                     </select>
                                 </div>
-                              
-                                <div class="col-md-12 mt-5 pt-5"> 
+
+                                <div class="col-md-12 mt-5 pt-5">
                                     <button class="btn ps-5 pe-5 text-white " style="background-color: #294D61; border-radius: 20px;" type="submit">Tambah</button>
                                 </div>
                             </div>
@@ -111,7 +111,7 @@
                     </div>
                 </div>
             </div>
-        
+
         </section>
     </div>
 </div>
