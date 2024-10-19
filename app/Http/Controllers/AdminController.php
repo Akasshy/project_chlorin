@@ -307,6 +307,7 @@ class AdminController extends Controller
             $School->delete();
         }
         return redirect('admin/school');
+    }
     //Teacher
     public function viewAddTeacher()
     {
