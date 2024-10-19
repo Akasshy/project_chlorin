@@ -40,7 +40,7 @@ Route::get('/admin/delete/user/school/{id}',[AdminController::class, 'deleteScho
 Route::get('/admin/add/profile/school/{id}',[AdminController::class, 'viewAddProfileSchool']);
 Route::post('/admin/add/profile/school/{id}',[AdminController::class, 'addProfileSchool']);
 Route::get('/admin/update/profile/school/{id}',[AdminController::class, 'viewUpdateProfileSchool']);
-Route::post('/admin/update/profile/school/{id}',[AdminController::class, 'updateSchool']);
+Route::post('/admin/update/profile/school/{id}',[AdminController::class, 'updateProfileSchool']);
 Route::get('/admin/delete/profile/school/{id}',[AdminController::class, 'deleteProfileSchool']);
 
 Route::get('/admin/teacher',[AdminController::class, 'viewTeacher']);

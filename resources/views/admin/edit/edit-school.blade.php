@@ -110,7 +110,7 @@
                                     <input type="text" value="{{$school->headmaster}}" class="form-control mt-2 border-0  pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" name="headmaster" id="npsn">
                                 </div>
                                 <div class="col-md-12 mt-5 pt-5">
-                                    <a href="/shool-page" class="btn btn-danger pe-5 ps-5 me-5 text-white" style="border-radius:20px">Hapus</a>
+                                    <a href="/admin/delete/profile/school/{{$school->id}}" class="btn btn-danger pe-5 ps-5 me-5 text-white" style="border-radius:20px">Hapus</a>
                                     <button class="btn ps-5 pe-5 text-white " style="background-color: #294D61; border-radius: 20px;" type="submit">Edit</button>
                                 </div>
                             </div>

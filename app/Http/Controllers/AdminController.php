@@ -301,6 +301,12 @@ class AdminController extends Controller
         return redirect('admin/school');
     }
 
+    public function deleteProfileSchool($id){
+        $School = School::find($id);
+        if ($School) {
+            $School->delete();
+        }
+        return redirect('admin/school');
     //Teacher
     public function viewAddTeacher()
     {
