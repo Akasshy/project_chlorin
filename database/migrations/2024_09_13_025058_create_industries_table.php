@@ -13,11 +13,14 @@ return new class extends Migration
     {
         Schema::create('industries', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->text('icon')->nullable();
             $table->string('name');
             $table->string('owner');
             $table->text('address');
             $table->string('lat');
             $table->string('long');
+            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }

@@ -140,7 +140,11 @@
                         <a class="nav-link active text-body" aria-current="page" href="#company">Company</a>
                     </li>
                     <li class="nav-item" style="margin-left: 14rem;">
+<<<<<<< HEAD:resources/views/Features/landingpage.blade.php
                         <a class="sigin nav-link ps-5 pe-5"  style=" border-radius: 20px;" href="/login"">Sig In</a>
+=======
+                        <a class="sigin nav-link ps-5 pe-5"  style=" border-radius: 20px;" href="/login">Sig In</a>
+>>>>>>> 0cfa8986eddf84e207d09925c72cf290c7f69a62:resources/views/landingpage.blade.php
                     </li>
                 </ul>
               </div>

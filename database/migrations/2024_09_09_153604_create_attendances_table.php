@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->enum('status', ['present','absent','leave']);
             $table->string('face_image');
-            $table->text('location');
+            $table->string('distance');
             $table->timestamps();
             $table->foreign('student_id')->references('id')->on('students')->cascadeOnDelete()->cascadeOnUpdate();
         });

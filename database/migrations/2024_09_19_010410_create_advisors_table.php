@@ -13,10 +13,12 @@ return new class extends Migration
     {
         Schema::create('advisors', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
             $table->string('profile_image');
             $table->string('name');
             $table->unsignedBigInteger('industry_id');
             $table->timestamps();
+            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->foreign('industry_id')->references('id')->on('industries')->cascadeOnDelete()->cascadeOnUpdate();
         });
     }
