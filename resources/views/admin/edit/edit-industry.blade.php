@@ -74,21 +74,22 @@
             <div class="container" >
                 <div class="content w-100">
                     <div class="profile p-5  bg-white" style="border-radius: 50px;" >
-                        <form action="/admin/update/profile/industry/" class="p-3 pt-5" method="post">
+                        <form action="/admin/update/profile/industry/{{$industry->id}}" class="p-3 pt-5" method="post" enctype="multipart/form-data">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="row">
                                         <div class="col-md-10">
                                             <label for="nisn" class="ms-2">Owner</label>
-                                            <input  class="form-control mt-2 border-0 pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" type="text" name="nisn" id="nisn" value="{{ $industry->owner }}">
+                                            <input  class="form-control mt-2 border-0 pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" type="text" name="owner" id="nisn" value="{{ $industry->owner }}">
                                         </div>
                                         <div class="col-md-2" style="margin-top: -50px;">
                                             <div class="row">
                                                 <div class="col-md-12 " >
-                                                    <img src="https://via.placeholder.com/100" alt="Preview" class="image-preview">
+                                                    <img src="{{$industry->icon? '/storage/image_profile/'.$industry->icon:'https://via.placeholder.com/100'}}" width="100" height="100" alt="{{$industry->icon}}" class="image-preview">
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <input type="file" id="fileInput" class="file-input" accept="image/*">
+                                                    <input type="file" id="fileInput" class="file-input" name="image">
                                                     <label for="fileInput" class="custom-label " >Edit Photo</label>
                                                 </div>
                                             </div>
@@ -102,18 +103,18 @@
 
                                 <div class="col-md-12 mt-3">
                                     <label for="alamat" class="ms-2">Alamat</label>
-                                    <textarea name="address " class="form-control mt-2 border-0" style="border-radius: 12px; background-color: #F6F6F6;" id="alamat" rows="4">{{$industry->address}}</textarea>
+                                    <textarea name="address" class="form-control mt-2 border-0" style="border-radius: 12px; background-color: #F6F6F6;" id="alamat" rows="4">{{$industry->address}}</textarea>
                                 </div>
                                 <div class="col-md-12 mt-3" >
                                     <label for="npsn" class="ms-2">Lattitud</label>
-                                    <input type="text" class="form-control mt-2 border-0  pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" name="latitude" id="npsn">
+                                    <input type="text" class="form-control mt-2 border-0  pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" value="{{$industry->lat}}" name="latitude" id="npsn">
                                 </div>
                                 <div class="col-md-12 mt-3" >
                                     <label for="npsn" class="ms-2">Longtitud</label>
-                                    <input type="text" class="form-control mt-2 border-0  pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" name="longitude" id="npsn">
+                                    <input type="text" class="form-control mt-2 border-0  pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" value="{{$industry->long}}" name="longitude" id="npsn">
                                 </div>
                                 <div class="col-md-12 mt-5">
-                                <a href="/shool-page" class="btn btn-danger pe-5 ps-5 me-5 text-white" style="border-radius:20px">Hapus</a>
+                                <a href="/admin/delete/profile/industry/{{$industry->id}}" class="btn btn-danger pe-5 ps-5 me-5 text-white" style="border-radius:20px">Hapus</a>
                                 <button class="btn ps-5 pe-5 text-white " style="background-color: #294D61; border-radius: 20px;" type="submit">Edit</button>
                                 </div>
                             </div>

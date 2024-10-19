@@ -12,11 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('schools', function (Blueprint $table) {
-            $table->string("npsn",10)->primary();
+            $table->id();
+            $table->string("npsn",10);
+            $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->text('address');
-            $table->string('icon');
+            $table->text('icon')->nullable();
             $table->string('headmaster');
+            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
             $table->timestamps();
         });
     }

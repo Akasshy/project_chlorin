@@ -74,14 +74,14 @@
             <div class="container" >
                 <div class="content w-100">
                     <div class="profile p-5  bg-white" style="border-radius: 50px;" >
-                        <form action="/admin/add/user/school" class="p-3 pt-5" method="post">
+                        <form action="/admin/add/user/school" class="p-3 pt-5" method="post" >
                             @csrf
                             <div class="row">
                                 <div class="col-md-12 mb-3">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label for="nisn" class="ms-2">Username</label>
-                                            <input class="form-control mt-2 border-0 pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" type="text" name="nisn" id="nisn">
+                                            <input class="form-control mt-2 border-0 pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" type="text" name="username" id="username">
                                         </div>
                                         {{-- <div class="col-md-2" style="margin-top: -50px;">
                                             <div class="row">

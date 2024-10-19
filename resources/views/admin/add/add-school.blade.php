@@ -70,17 +70,18 @@
 </header>
 <div class="content-wrapper" style="margin-top:-20px; ">
     <div class="container-full">
-        <section class="content">   
-            <div class="container" >              
+        <section class="content">
+            <div class="container" >
                 <div class="content w-100">
                     <div class="profile p-5  bg-white" style="border-radius: 50px;" >
-                        <form action="" class="p-3 pt-5" method="post">
+                        <form action="/admin/add/profile/school/{{$id}}" class="p-3 pt-5" enctype="multipart/form-data" method="post">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="row">
                                         <div class="col-md-10">
                                             <label for="nisn" class="ms-2">Npsn</label>
-                                            <input class="form-control mt-2 border-0 pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" type="number" name="nisn" id="nisn">
+                                            <input class="form-control mt-2 border-0 pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" type="number" name="npsn" id="nisn">
                                         </div>
                                         <div class="col-md-2" style="margin-top: -50px;">
                                             <div class="row">
@@ -88,8 +89,8 @@
                                                     <img src="https://via.placeholder.com/100" alt="Preview" class="image-preview">
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <input type="file" id="fileInput" class="file-input" accept="image/*">
-                                                    <label for="fileInput" class="custom-label " >Add Photo</label>
+                                                    <input type="file" id="fileInput" name="image" class="file-input">
+                                                    <label for="fileInput" class="custom-label" >Add Photo</label>
                                                 </div>
                                             </div>
                                         </div>
@@ -97,18 +98,18 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top:-30px ;">
                                     <label for="nama" class="ms-2">Nama Sekolah</label>
-                                    <input type="text" class="form-control mt-2 border-0 pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6; " name="" id="nama">
+                                    <input type="text" class="form-control mt-2 border-0 pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6; " name="name" id="nama">
                                 </div>
-                              
+
                                 <div class="col-md-12 mt-3">
                                     <label for="alamat" class="ms-2">Alamat</label>
-                                    <textarea name="" class="form-control mt-2 border-0" style="border-radius: 12px; background-color: #F6F6F6;" id="alamat" rows="4"></textarea>
+                                    <textarea name="address" class="form-control mt-2 border-0" style="border-radius: 12px; background-color: #F6F6F6;" id="alamat" rows="4"></textarea>
                                 </div>
                                 <div class="col-md-12 mt-3" >
                                     <label for="npsn" class="ms-2">Nama Kepala Sekolah</label>
-                                    <input type="text" class="form-control mt-2 border-0  pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" name="" id="npsn">
+                                    <input type="text" class="form-control mt-2 border-0  pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" name="headmaster" id="npsn">
                                 </div>
-                                <div class="col-md-12 mt-5 pt-5"> 
+                                <div class="col-md-12 mt-5 pt-5">
                                     <button class="btn ps-5 pe-5 text-white " style="background-color: #294D61; border-radius: 20px;" type="submit">Tambah</button>
                                 </div>
                             </div>
@@ -116,7 +117,7 @@
                     </div>
                 </div>
             </div>
-        
+
         </section>
     </div>
 </div>

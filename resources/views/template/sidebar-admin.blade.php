@@ -10,19 +10,24 @@
                 <a href="/admin-page" class="nav-link text-white fs-5"><i class="fi fi-rs-home pe-3"></i>Beranda</a>
             </li>
             <li id="nav" class="nav-item ps-3">
-                <a href="/admin/school" class="nav-link text-white fs-5"><i class="fi fi-rs-student-alt pe-3"></i>Schools</a>
+                <a href="/admin/school" class="nav-link text-white fs-5"><i
+                        class="fi fi-rs-student-alt pe-3"></i>Schools</a>
             </li>
             <li id="nav" class="nav-item ps-3">
-                <a href="/admin/industry" class="nav-link text-white fs-5"><i class="fi fi-rs-industry-alt pe-3"></i>Industrys</a>
+                <a href="/admin/industry" class="nav-link text-white fs-5"><i
+                        class="fi fi-rs-industry-alt pe-3"></i>Industrys</a>
             </li>
             <li id="nav" class="nav-item ps-3">
-                <a href="/admin/teacher" class="nav-link text-white fs-5"><i class="fi fi-rr-workshop pe-3"></i>Teachers</a>
+                <a href="/admin/teacher" class="nav-link text-white fs-5"><i
+                        class="fi fi-rr-workshop pe-3"></i>Teachers</a>
             </li>
             <li id="nav" class="nav-item ps-3">
-                <a href="/admin/advisor" class="nav-link text-white fs-5"><i class="fi fi-rs-lesson-class pe-3"></i>Advisors</a>
+                <a href="/admin/advisor" class="nav-link text-white fs-5"><i
+                        class="fi fi-rs-lesson-class pe-3"></i>Advisors</a>
             </li>
             <li id="nav" class="nav-item ps-3">
-                <a href="/admin/student" class="nav-link text-white fs-5"><i class="fi fi-rr-student pe-3"></i>Students</a>
+                <a href="/admin/student" class="nav-link text-white fs-5"><i
+                        class="fi fi-rr-student pe-3"></i>Students</a>
             </li>
             {{-- <li id="nav" class="nav-item ps-3 ">
                 <a href="profile.html" class="nav-link text-white fs-5">

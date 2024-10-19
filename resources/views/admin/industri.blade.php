@@ -15,7 +15,7 @@
                     </a>
                 </li>
                 <li class="pt-15">
-                    <h3 class="ml-3 fw-bold">Industry</h3> <!-- Margin left for left spacing -->
+                    <h3 class="ml-3 fw-bold">Industry</h3> <!-- Margin left      left spacing -->
                 </li>
                 <li class="ml-auto"> <!-- Pushes user account to the right -->
                     <!-- User Account-->
@@ -70,7 +70,7 @@
                                             <td class="fw-bold">{{ $item->address }}</td>
                                             <td class="fw-bold">
                                                 <a href="/admin/update/profile/industry/{{ $item->id }}" class="btn text-white fw-bold"
-                                                    style="background: #294D61;">Pilih</a> 
+                                                    style="background: #294D61;">Pilih</a>
                                             </td>
                                         </tr>
                                         @endforeach

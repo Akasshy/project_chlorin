@@ -51,8 +51,8 @@
                     <form class="p-5" method="POST" action="/auth">
                         @csrf
                         <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                            <h2 class=" me-3 fw-bold mb-3">Login</h2>    
-                        </div>                
+                            <h2 class=" me-3 fw-bold mb-3">Login</h2>
+                        </div>
                         <!-- {{-- <div data-mdb-input-init class="form-outline mb-3 mt-3">
                             <label class="form-label fw-bold ms-3" for="form3Example1">Username</label>
                             <input type="text" id="form3Example1" style="background-color: #F0F0F0; border-radius: 20px;" class="form-control form-control-lg"
@@ -72,9 +72,9 @@
                                 <input type="password" id="password" style="background-color: #F0F0F0; border-radius: 20px;" class="form-control form-control-lg"
                                     placeholder="admin#123" name="password" required value="{{ old('password') }}">
                                 <i class="fas fa-eye input-icon" id="toggle-icon" onclick="togglePasswordVisibility()"></i>
-                            </div> 
+                            </div>
                         </div>
-    
+
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="form-check">
                                 <input class="form-check-input me-3" style="border-radius: 8px; width: 25px; height: 20px; " type="checkbox" value="" id="form2Example3" />
@@ -84,7 +84,7 @@
                             </div>
                             <a href="#!" class="" style="text-decoration: none; color:#470B77;">Lupa password?</a>
                         </div>
-    
+
                         <div class="text-center text-lg-start mt-4 " style="padding-top: 100px;">
                             <button type="submit" data-mdb-button-init data-mdb-ripple-init
                                 class="btn btn-lg w-100  text-center fw-bold"
@@ -92,7 +92,7 @@
                             <!-- <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="register.html"
                                     class="link-danger">Register</a></p> -->
                         </div>
-    
+
                     </form>
                 </div>
             </div>

@@ -13,11 +13,14 @@ return new class extends Migration
     {
         Schema::create('teachers', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('school_id');
             $table->string('profile_image');
             $table->string('name');
-            $table->string('npsn');
+            // $table->string('npsn');
             $table->timestamps();
-            $table->foreign('npsn')->references('npsn')->on('schools')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('school_id')->references('id')->on('schools')->cascadeOnDelete()->cascadeOnUpdate();
         });
     }
 

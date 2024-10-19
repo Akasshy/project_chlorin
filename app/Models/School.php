@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class School extends Model
 {
     use HasFactory;
-    protected $primaryKey = 'npsn';
+    // protected $primaryKey = 'npsn';
 
     protected $fillable = ['npsn','name','address','icon','headmaster'];
 

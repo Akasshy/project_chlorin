@@ -71,7 +71,7 @@
                                                 <td>{{ $item->name }}</td>
                                                 <td>{{ $item->address }}</td>
                                                 <td>
-                                                    <a href="/admin/update/profile/school/{{ $item->npsn }}" class="btn text-white fw-bold"
+                                                    <a href="/admin/update/profile/school/{{ $item->id }}" class="btn text-white fw-bold"
                                                         style="background: #294D61;">Pilih</a>
                                                 </td>
                                             </tr>

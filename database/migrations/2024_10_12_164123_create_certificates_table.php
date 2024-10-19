@@ -14,13 +14,16 @@ return new class extends Migration
         Schema::create('certificates', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('student_id');
-            $table->string('npsn');
+            $table->unsignedBigInteger('school_id');
+            $table->unsignedBigInteger('industry_id');
+            // $table->string('npsn');
             $table->string('name');
             $table->string('course');
             $table->date('date');
             $table->timestamps();
             $table->foreign('student_id')->references('id')->on('students')->cascadeOnDelete()->cascadeOnUpdate();
-            $table->foreign('npsn')->references('npsn')->on('schools')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('school_id')->references('id')->on('schools')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->foreign('industry_id')->references('id')->on('industries')->cascadeOnDelete()->cascadeOnUpdate();
         });
     }
 
