@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\API\AuthApiController;
 use App\Http\Controllers\API\StudentController;
+use App\Http\Middleware\LoginAuth;
 // use App\Http\Controllers\AuthApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -17,10 +18,8 @@ Route::get('/home', [StudentController::class, 'home']);
 Route::post('/absence', [StudentController::class, 'absence']);
 Route::get('/absence/history', [StudentController::class, 'history']);
 Route::get('/task', [StudentController::class, 'task']);
-Route::get('/setings', [StudentController::class,'setings']);
+Route::get('/setings', [StudentController::class, 'setings']);
 Route::get('/profile/get', [StudentController::class, 'getProfile']);
 Route::post('/profile/update', [StudentController::class, 'updateProfile']);
 Route::get('/user/get', [StudentController::class, 'getStudent']);
 Route::post('/user/update', [StudentController::class, 'updateStudent']);
-
-

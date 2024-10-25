@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use App\Models\Advisor;
 use App\Models\Industry;
 use App\Models\Internship;
+use App\Models\Passion;
 use App\Models\School;
 use App\Models\Student;
 use App\Models\Task;
@@ -44,10 +45,16 @@ class DatabaseSeeder extends Seeder
         User::create([
             'username' => 'chlorine_digital_media',
             'email' => 'pkl@chlorine.com',
-            'role' => 'school',
+            'role' => 'industry',
             'password' => bcrypt('1234')
         ]);
 
+        User::create([
+            'username' => 'ypc_fiber_net',
+            'email' => 'ypcfiber@ypc.id',
+            'role' => 'industry',
+            'password' => bcrypt('1234')
+        ]);
         School::create([
             'user_id' => 3,
             'npsn' => "88994422",
@@ -78,6 +85,15 @@ class DatabaseSeeder extends Seeder
             'long' => '107.60621755331971'
         ]);
 
+        Industry::create([
+            'user_id' => 5,
+            'name' => 'YPC Fiber and Network Services',
+            'owner' => 'AA OPAL',
+            'address' => 'J4Q4+HCW, Cikunten, Kec. Singaparna, Kabupaten Tasikmalaya, Jawa Barat 46414',
+            'lat' => '-7.36094762682339',
+            'long' => '108.10606221822894'
+        ]);
+
         Task::create([
             'student_id' => '1',
             'name' => 'Membuat web',
@@ -94,5 +110,6 @@ class DatabaseSeeder extends Seeder
             'industry_id' => 1,
             'is_accepted' => true
         ]);
+        Passion::factory(1)->create();
     }
 }

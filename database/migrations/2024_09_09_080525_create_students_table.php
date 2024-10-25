@@ -23,6 +23,7 @@ return new class extends Migration
             $table->text('address');
             //revisi ke bahasa inggris
             $table->string('major');
+            $table->string('potency')->nullable();
             // $table->string('npsn',10);
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users')->cascadeOnDelete()->cascadeOnUpdate();

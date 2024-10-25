@@ -3,12 +3,11 @@
 namespace App\Http\Middleware;
 
 use Closure;
-// use Illuminate\Container\Attributes\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class AuthTokenJWT
+class LoginAuth
 {
     /**
      * Handle an incoming request.
@@ -19,8 +18,8 @@ class AuthTokenJWT
     {
         if (!Auth::guard('api')->check()) {
             return response()->json([
-                'message' => 'Unauthorized'
-            ], 401);
+                'message' => 'Unauthorized',
+            ], 200);
         }
         return $next($request);
     }
