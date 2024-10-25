@@ -41,7 +41,7 @@ class StudentController extends Controller
                 'total_tugas_selesai' => count(Task::where('student_id', $student->id)->where('is_done', true)->get()),
                 'data_user' => $student,
             ]
-        ]);
+        ], 200);
     }
     // public function absence(Request $request)
     // {

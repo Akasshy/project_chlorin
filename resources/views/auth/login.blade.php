@@ -60,13 +60,8 @@
                         </div> --}} -->
                         <div data-mdb-input-init class="form-outline mb-3 mt-3">
                             <label class="form-label fw-bold ms-3" for="form3Example2">Email</label>
-<<<<<<< HEAD
-                            <input type="email" id="form3Example2" style="background-color: #F0F0F0; border-radius: 20px;" name="email" class="form-control form-control-lg"
-                                placeholder="example@gmail.com" value="{{ old('email') }}" required>
-=======
                             <input type="email" id="form3Example2" style="background-color: #F0F0F0; border-radius: 20px;" class="form-control form-control-lg"
                                 placeholder="example@gmail.com" name="email" required value="{{ old('email') }}">
->>>>>>> 0cfa8986eddf84e207d09925c72cf290c7f69a62
                         </div>
                         <div data-mdb-input-init class="form-outline mb-3 mt-3">
                             <!-- {{-- <div class="input-group-append">
@@ -74,13 +69,8 @@
                             </div> --}} -->
                             <div class="input-container">
                                 <label class="form-label fw-bold ms-3" for="password">Password</label>
-<<<<<<< HEAD
-                                <input type="password" id="password" style="background-color: #F0F0F0; border-radius: 20px;" name="password" class="form-control form-control-lg"
-                                    placeholder="admin#123" required>
-=======
                                 <input type="password" id="password" style="background-color: #F0F0F0; border-radius: 20px;" class="form-control form-control-lg"
                                     placeholder="admin#123" name="password" required value="{{ old('password') }}">
->>>>>>> 0cfa8986eddf84e207d09925c72cf290c7f69a62
                                 <i class="fas fa-eye input-icon" id="toggle-icon" onclick="togglePasswordVisibility()"></i>
                             </div>
                         </div>

@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'> 
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-straight/css/uicons-solid-straight.css'>
 <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
 <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 <style>
@@ -18,7 +18,7 @@
         background-image:url(img/fbg.PNG) ;
         background-size: cover;
         padding-bottom: 48%;
-        
+
     }
     .sigin{
         background-color:#082D33;
@@ -54,16 +54,16 @@
         animation: reverse;
     }
     .scroll-container {
-      white-space: nowrap;         
-      overflow-x: auto;            
+      white-space: nowrap;
+      overflow-x: auto;
       padding: 10px;
     }
     /* Set item untuk tampil inline */
     .scroll-item {
-      display: inline-block;     
-      width: 200px;                
-      height: 150px;               
-      margin-right: 10px;         
+      display: inline-block;
+      width: 200px;
+      height: 150px;
+      margin-right: 10px;
       /* background-color: #f8f9fa;   */
       text-align: center;
       /* line-height: 150px;          */
@@ -140,11 +140,7 @@
                         <a class="nav-link active text-body" aria-current="page" href="#company">Company</a>
                     </li>
                     <li class="nav-item" style="margin-left: 14rem;">
-<<<<<<< HEAD:resources/views/Features/landingpage.blade.php
-                        <a class="sigin nav-link ps-5 pe-5"  style=" border-radius: 20px;" href="/login"">Sig In</a>
-=======
                         <a class="sigin nav-link ps-5 pe-5"  style=" border-radius: 20px;" href="/login">Sig In</a>
->>>>>>> 0cfa8986eddf84e207d09925c72cf290c7f69a62:resources/views/landingpage.blade.php
                     </li>
                 </ul>
               </div>
@@ -306,7 +302,7 @@
                         <p class="mt-2 fw-bold" >Honda</p>
                     </div>
                 </a>
-              </div>  
+              </div>
             </div>
         </div>
     </div>
@@ -348,7 +344,7 @@
                             </form>
                         </div>
                     </div>
-        
+
                     <div class="col-lg-4">
                         <div class="newsletter-box" >
                             <h4>Our Newsletters</h4>
@@ -362,7 +358,7 @@
                         </div>
                     </div>
                 </div>
-        
+
                 <div class="row g-4 mt-4">
                     <div class="col-md-6">
                         <div class="footer-contact text-start" style="background-color: #0C8C91;">

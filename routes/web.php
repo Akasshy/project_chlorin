@@ -8,17 +8,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return redirect('/landing-page');
-<<<<<<< HEAD
-=======
     // return view('admin.add-user.add-industry');
->>>>>>> 0cfa8986eddf84e207d09925c72cf290c7f69a62
 });
 
 Route::get('/login',[AuthController::class,'viewLogin']);
 Route::post('/auth',[AuthController::class,'login']);
-<<<<<<< HEAD
-Route::get('/landing-page',[AuthController::class,'landingPage']);
-=======
 Route::get('/test',[AuthController::class,'wellcome']);
 Route::get('/landing-page',[AuthController::class,'landingpage']);
 
@@ -102,4 +96,3 @@ Route::post('/student/update/profile/{id}',[Teacher::class,'updateProfileStudent
 Route::post('/student/delete/{id}',[Teacher::class,'deleteStudent']);
 
 route::get('/intership-request',[Teacher::class,'intershipRequest']);
->>>>>>> 0cfa8986eddf84e207d09925c72cf290c7f69a62
