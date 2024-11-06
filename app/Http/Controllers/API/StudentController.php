@@ -137,7 +137,7 @@ class StudentController extends Controller
             // 'id_siswa' => 'required',
             'latitude' => 'required',
             'longitude' => 'required',
-            'face_image' => 'required'
+            // 'face_image' => 'required'
         ]);
         // $user_id = auth()->guard('api')->user();
         // $id_user = $user_id->id;
@@ -200,7 +200,7 @@ class StudentController extends Controller
         $absen = Attendance::create([
             'student_id' => $siswa->id,
             'description' => $request->description? $request->description: 'null',
-            'status' => '   present'
+            'status' => 'present'
         ]);
         // if ($absen) {
         return response()->json([
