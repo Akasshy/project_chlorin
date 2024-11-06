@@ -86,7 +86,9 @@
                                         <div class="col-md-2" style="margin-top: -50px;">
                                             <div class="row">
                                                 <div class="col-md-12 " >
-                                                    <img src="{{$school->icon?'/storage/image_profile/'.$school->icon:'https://via.placeholder.com/100'}}" alt="Preview" class="image-preview">
+                                                    <div class="image-preview">
+                                                        <img src="{{$school->icon?asset('/storage/image_profile/'.$school->icon):asset('assets/default.png')}}" alt="Preview" class="image-preview">
+                                                    </div>
                                                 </div>
                                                 <div class="col-md-12">
                                                     <input type="file" id="fileInput" class="file-input" name="image">

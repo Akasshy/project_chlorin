@@ -1,7 +1,7 @@
 <aside class="main-sidebar">
     <!-- sidebar-->
     <aside class="navbar text-white"
-        style=" height: 100vh;padding-bottom: 280px; background: #6DA5C0; width: 37vh; border-end-end-radius: 50px; border-top-right-radius: 50px;">
+        style=" height: 100vh;padding-bottom: 280px; background: #6DA5C0; border-end-end-radius: 50px; border-top-right-radius: 50px;">
         <ul class="navbar-nav ms-4 mt-5">
             <li class="nav-item ps-3">
                 <h3 class="nav-item w-100 fw-bold">Praktik kerja lapangan</h3>

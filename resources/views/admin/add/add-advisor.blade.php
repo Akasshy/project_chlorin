@@ -74,13 +74,13 @@
             <div class="container" >
                 <div class="content w-100">
                     <div class="profile p-5  bg-white" style="border-radius: 50px;" >
-                        <form action="" class="p-3 pt-5" method="post">
+                        <form action="/admin/add/profile/advisor/{{ $id }}" class="p-3 pt-5" method="post" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="row">
                                         <div class="col-md-10">
                                             <label for="nisn" class="ms-2">Nama</label>
-                                            <input class="form-control mt-2 border-0 pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" type="text" name="nisn" id="nisn">
+                                            <input class="form-control mt-2 border-0 pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" type="text" name="name" id="nisn">
                                         </div>
                                         <div class="col-md-2" style="margin-top: -50px;">
                                             <div class="row">
@@ -88,7 +88,7 @@
                                                     <img src="https://via.placeholder.com/100" alt="Preview" class="image-preview">
                                                 </div>
                                                 <div class="col-md-12">
-                                                    <input type="file" id="fileInput" class="file-input" accept="image/*">
+                                                    <input type="file" id="fileInput" class="file-input" name="image">
                                                     <label for="fileInput" class="custom-label " >Add Photo</label>
                                                 </div>
                                             </div>
@@ -97,8 +97,10 @@
                                 </div>
                                 <div class="col-md-12" style="margin-top:-30px ;">
                                     <label for="industry" class="ms-2 "  >Industry</label>
-                                    <select name="" id="industry" class="form-control boder-0 mt-2" style="border-radius: 12px; background-color: #F6F6F6; ">
-                                        <option value="">Chlorin</option>
+                                    <select name="industry_id" id="industry" class="form-control boder-0 mt-2" style="border-radius: 12px; background-color: #F6F6F6; ">
+                                        @foreach ($industry as $item)
+                                        <option value="{{ $item->id }}">{{ $item->name }}</option>
+                                        @endforeach
                                         <option value="">Telkom</option>
                                     </select>
                                 </div>

@@ -1,4 +1,4 @@
-@extends('..template/pasang-template-admin')
+    @extends('..template/pasang-template-admin')
 @section('content')
 <style>
     /* Sembunyikan input file default */

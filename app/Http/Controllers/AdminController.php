@@ -9,8 +9,10 @@ use App\Models\Student;
 use App\Models\Teacher;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 use function Illuminate\Log\log;
+use function Laravel\Prompts\error;
 
 class AdminController extends Controller
 {
@@ -43,6 +45,83 @@ class AdminController extends Controller
     {
         $data['student'] = Student::all();
         return view('admin.student', $data);
+    }
+    public function viewAddUser($role)
+    {
+        switch ($role) {
+            case 'industry':
+                return view('admin.add-user.add-industry');
+                break;
+            case 'school':
+                return view('admin.add-user.add-school');
+                break;
+            case 'teacher':
+                return view('admin.add-user.add-teacher');
+                break;
+            case 'advisor':
+                return view('admin.add-user.add-advisor');
+                break;
+            case 'student':
+                return view('admin.add-user.add-student');
+                break;
+            default:
+                return error_log('Undefinded role');
+                break;
+        }
+    }
+    public function viewAddProfile($status,$role, $id)
+    {
+        switch ($role) {
+            case 'industry':
+                $data['id'] = $id;
+                return $status == 'add' ? view('admin.add.add-industry', $data) : view('admin.edit.edit-industry', $data);
+
+                break;
+            case 'school':
+                $data['id'] = $id;
+                return $status == 'add' ? view('admin.add.add-school', $data): view('admin.edit.edit-school', $data);
+                break;
+            case 'teacher':
+                $data['id'] = $id;
+                return $status == 'add' ? view('admin.add.add-teacher', $data): view('admin.edit.edit-teacher', $data);
+                break;
+            case 'advisor':
+                $data['id'] = $id;
+                $data['industry'] = Industry::all();
+                return $status == 'add' ? view('admin.add.add-advisor', $data): view('admin.edit.edit-advisor', $data);
+                break;
+            case 'student':
+                $data['id'] = $id;
+                return $status == 'add' ? view('admin.add.add-student', $data): view('admin.edit.edit-student', $data);
+                break;
+            default:
+                return error_log('Undefinded role');
+                break;
+        }
+    }
+
+    public function addUser(Request $request, $role)
+    {
+        $validator = Validator::make($request->all(), [
+            // 'name' => 'required',
+            'username' => 'required',
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            return back()->withErrors($validator);
+        }
+
+        $user = new User();
+        // $user->name = $request->name;
+        $user->username = $request->username;
+        $user->email = $request->email;
+        $user->password = bcrypt($request->password);
+        $user->role = $role;
+        $user->save();
+
+        return redirect('/admin/add/profile/' . $role.'/'.$user->id);
     }
 
     //Industry
@@ -210,9 +289,9 @@ class AdminController extends Controller
         // ]);
 
         if ($request->file('image')) {
-            $file_name = $request->name.'_image.'.$request->file('image')->getClientOriginalExtension();
+            $file_name = $request->name . '_image.' . $request->file('image')->getClientOriginalExtension();
             $request->file('image')->storeAs('image_profile', $file_name);
-        }else{
+        } else {
             $file_name = null;
         }
 
@@ -285,7 +364,7 @@ class AdminController extends Controller
         // ]);
 
         if ($request->file('image')) {
-            $file_name = $request->name.'_image.'.$request->file('image')->getClientOriginalExtension();
+            $file_name = $request->name . '_image.' . $request->file('image')->getClientOriginalExtension();
             $request->file('image')->storeAs('image_profile', $file_name);
         }
 
@@ -301,7 +380,8 @@ class AdminController extends Controller
         return redirect('admin/school');
     }
 
-    public function deleteProfileSchool($id){
+    public function deleteProfileSchool($id)
+    {
         $School = School::find($id);
         if ($School) {
             $School->delete();
@@ -328,7 +408,7 @@ class AdminController extends Controller
         $user->password = bcrypt($request->password);
         $user->save();
 
-        return redirect('/admin/add/profile/teacher');
+        return redirect('/admin/add/profile/teacher/' . $user->id);
     }
     public function viewUpdateTeacher()
     {
