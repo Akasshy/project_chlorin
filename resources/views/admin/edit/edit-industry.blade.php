@@ -87,7 +87,7 @@
                                             <div class="row">
                                                 <div class="col-md-12 " >
                                                     <div class="image-preview align-items-center row">
-                                                        <img src="{{$school->icon?asset('/storage/image_profile/'.$school->icon):asset('assets/default.png')}}" alt="Preview" class="image-preview">
+                                                        <img src="{{$industry->icon?asset('/storage/image_profile/'.$industry->icon):asset('assets/default.png')}}" alt="Preview" class="image-preview">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-12">
@@ -109,11 +109,11 @@
                                 </div>
                                 <div class="col-md-12 mt-3" >
                                     <label for="npsn" class="ms-2">Lattitud</label>
-                                    <input type="text" class="form-control mt-2 border-0  pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" value="{{$industry->lat}}" name="latitude" id="npsn">
+                                    <input type="text" class="form-control mt-2 border-0  pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" value="{{$industry->lat}}" name="lat" id="npsn">
                                 </div>
                                 <div class="col-md-12 mt-3" >
                                     <label for="npsn" class="ms-2">Longtitud</label>
-                                    <input type="text" class="form-control mt-2 border-0  pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" value="{{$industry->long}}" name="longitude" id="npsn">
+                                    <input type="text" class="form-control mt-2 border-0  pt-2 pb-2" style="border-radius: 12px; background-color: #F6F6F6;" value="{{$industry->long}}" name="long" id="npsn">
                                 </div>
                                 <div class="col-md-12 mt-5">
                                 <a href="/admin/delete/profile/industry/{{$industry->id}}" class="btn btn-danger pe-5 ps-5 me-5 text-white" style="border-radius:20px">Hapus</a>

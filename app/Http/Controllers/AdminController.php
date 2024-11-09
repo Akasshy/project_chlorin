@@ -69,30 +69,50 @@ class AdminController extends Controller
                 break;
         }
     }
-    public function viewAddProfile($status,$role, $id)
+    public function viewAddProfile($status, $role, $id)
     {
         switch ($role) {
             case 'industry':
                 $data['id'] = $id;
-                return $status == 'add' ? view('admin.add.add-industry', $data) : view('admin.edit.edit-industry', $data);
-
+                $data['industry'] = Industry::find($id);
+                if($status == 'add'){
+                    $return = view('admin.add.add-industry', $data);
+                }else if($status == 'delete'){
+                    $return = redirect()->route('crud_industry', [$id,'delete']);
+                }else{
+                    $return = view('admin.edit.edit-industry', $data);
+                }
+                return $return;
                 break;
             case 'school':
                 $data['id'] = $id;
-                return $status == 'add' ? view('admin.add.add-school', $data): view('admin.edit.edit-school', $data);
+                $data['school'] = School::find($id);
+                if($status == 'add'){
+                    $return = view('admin.add.add-school', $data);
+                }else if($status == 'delete'){
+                    $return = redirect()->route('crud_industry', [$id,'delete']);
+                }else{
+                    $return = view('admin.edit.edit-school', $data);
+                }
+                return $return;
+                // return $status == 'add' ? view('admin.add.add-school', $data) : view('admin.edit.edit-school', $data);
+
                 break;
             case 'teacher':
                 $data['id'] = $id;
-                return $status == 'add' ? view('admin.add.add-teacher', $data): view('admin.edit.edit-teacher', $data);
+                $data['teacher'] = Teacher::find($id);
+                return $status == 'add' ? view('admin.add.add-teacher', $data) : view('admin.edit.edit-teacher', $data);
                 break;
             case 'advisor':
                 $data['id'] = $id;
                 $data['industry'] = Industry::all();
-                return $status == 'add' ? view('admin.add.add-advisor', $data): view('admin.edit.edit-advisor', $data);
+                $data['advisor'] = Advisor::find($id);
+                return $status == 'add' ? view('admin.add.add-advisor', $data) : view('admin.edit.edit-advisor', $data);
                 break;
             case 'student':
                 $data['id'] = $id;
-                return $status == 'add' ? view('admin.add.add-student', $data): view('admin.edit.edit-student', $data);
+                $data['student'] = Student::find($id);
+                return $status == 'add' ? view('admin.add.add-student', $data) : view('admin.edit.edit-student', $data);
                 break;
             default:
                 return error_log('Undefinded role');
@@ -121,7 +141,7 @@ class AdminController extends Controller
         $user->role = $role;
         $user->save();
 
-        return redirect('/admin/add/profile/' . $role.'/'.$user->id);
+        return redirect('/admin/add/profile/' . $role . '/' . $user->id);
     }
 
     //Industry
